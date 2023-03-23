@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(ISBLANK(Phone),false,NOT(OR(REGEX( Phone , &quot;[+49]{3} [0-9]{3} [0-9]{7}&quot;))))</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Please enter phone in &quot;+49 XXX XXXXXXX&quot; format (Ex: +49 123 1234567).</errorMessage>
+</ValidationRule>
