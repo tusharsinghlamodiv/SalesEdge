@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DH_Account</fullName>
+    <fields>Name</fields>
+    <fields>Account_Business_Type__c</fields>
+    <fields>BillingAddress</fields>
+    <fields>Website</fields>
+    <fields>Account_Management__c</fields>
+    <fields>OwnerId</fields>
+    <fields>Account_Status_Icon__c</fields>
+    <label>DH Account</label>
+</CompactLayout>
