@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Application software &amp; Systems software</fullName>
+        <default>false</default>
+        <label>Application software &amp; Systems software</label>
+    </customValue>
+    <customValue>
+        <fullName>Art galleries and related services</fullName>
+        <default>false</default>
+        <label>Art galleries and related services</label>
+    </customValue>
+    <customValue>
+        <fullName>Banks</fullName>
+        <default>false</default>
+        <label>Banks</label>
+    </customValue>
+    <customValue>
+        <fullName>Biotechnology laboratories and services</fullName>
+        <default>false</default>
+        <label>Biotechnology laboratories and services</label>
+    </customValue>
+    <customValue>
+        <fullName>Broadcasting, publications and content providers</fullName>
+        <default>false</default>
+        <label>Broadcasting, publications and content providers</label>
+    </customValue>
+    <customValue>
+        <fullName>Business and industrial products</fullName>
+        <default>false</default>
+        <label>Business and industrial products</label>
+    </customValue>
+    <customValue>
+        <fullName>Business and industrial services</fullName>
+        <default>false</default>
+        <label>Business and industrial services</label>
+    </customValue>
+    <customValue>
+        <fullName>Business and industrial services &amp; Other consumer products manufacturing</fullName>
+        <default>false</default>
+        <label>Business and industrial services &amp; Other consumer products manufacturing</label>
+    </customValue>
+    <customValue>
+        <fullName>Business and industrial services &amp; Other consumer products retailing</fullName>
+        <default>false</default>
+        <label>Business and industrial services &amp; Other consumer products retailing</label>
+    </customValue>
+    <customValue>
+        <fullName>Chemicals and materials: service related activities</fullName>
+        <default>false</default>
+        <label>Chemicals and materials: service related activities</label>
+    </customValue>
+    <customValue>
+        <fullName>Coal and metal ores</fullName>
+        <default>false</default>
+        <label>Coal and metal ores</label>
+    </customValue>
+    <customValue>
+        <fullName>Communications: retail/wholesale and repair activities</fullName>
+        <default>false</default>
+        <label>Communications: retail/wholesale and repair activities</label>
+    </customValue>
+    <customValue>
+        <fullName>Communications equipment</fullName>
+        <default>false</default>
+        <label>Communications equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer: retail/wholesale and repair activities</fullName>
+        <default>false</default>
+        <label>Computer: retail/wholesale and repair activities</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer hardware</fullName>
+        <default>false</default>
+        <label>Computer hardware</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction: related activities</fullName>
+        <default>false</default>
+        <label>Construction: related activities</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction materials</fullName>
+        <default>false</default>
+        <label>Construction materials</label>
+    </customValue>
+    <customValue>
+        <fullName>Courier services</fullName>
+        <default>false</default>
+        <label>Courier services</label>
+    </customValue>
+    <customValue>
+        <fullName>Crop cultivation</fullName>
+        <default>false</default>
+        <label>Crop cultivation</label>
+    </customValue>
+    <customValue>
+        <fullName>Data management services</fullName>
+        <default>false</default>
+        <label>Data management services</label>
+    </customValue>
+    <customValue>
+        <fullName>Educational and training products/services</fullName>
+        <default>false</default>
+        <label>Educational and training products/services</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy related products and equipment</fullName>
+        <default>false</default>
+        <label>Energy related products and equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy related services</fullName>
+        <default>false</default>
+        <label>Energy related services</label>
+    </customValue>
+    <customValue>
+        <fullName>Fashion industry</fullName>
+        <default>false</default>
+        <label>Fashion industry</label>
+    </customValue>
+    <customValue>
+        <fullName>Fishing, hunting and animal husbandry</fullName>
+        <default>false</default>
+        <label>Fishing, hunting and animal husbandry</label>
+    </customValue>
+    <customValue>
+        <fullName>Food and beverages</fullName>
+        <default>false</default>
+        <label>Food and beverages</label>
+    </customValue>
+    <customValue>
+        <fullName>Forestry, logging and related services</fullName>
+        <default>false</default>
+        <label>Forestry, logging and related services</label>
+    </customValue>
+    <customValue>
+        <fullName>Freight transport</fullName>
+        <default>false</default>
+        <label>Freight transport</label>
+    </customValue>
+    <customValue>
+        <fullName>Gas and oil</fullName>
+        <default>false</default>
+        <label>Gas and oil</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare institutions and services</fullName>
+        <default>false</default>
+        <label>Healthcare institutions and services</label>
+    </customValue>
+    <customValue>
+        <fullName>Hospitality, sports and entertainment facilities</fullName>
+        <default>false</default>
+        <label>Hospitality, sports and entertainment facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>Household articles</fullName>
+        <default>false</default>
+        <label>Household articles</label>
+    </customValue>
+    <customValue>
+        <fullName>Household furniture</fullName>
+        <default>false</default>
+        <label>Household furniture</label>
+    </customValue>
+    <customValue>
+        <fullName>Hydroelectricity</fullName>
+        <default>false</default>
+        <label>Hydroelectricity</label>
+    </customValue>
+    <customValue>
+        <fullName>Hydroelectricity &amp; Alternative energy</fullName>
+        <default>false</default>
+        <label>Hydroelectricity &amp; Alternative energy</label>
+    </customValue>
+    <customValue>
+        <fullName>Hydroelectricity &amp; Alternative energy &amp; Infrastructure- Renewable Energy- Conventional Energy</fullName>
+        <default>false</default>
+        <label>Hydroelectricity &amp; Alternative energy &amp; Infrastructure- Renewable Energy- Conventional Energy</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrial measurement, sensing and control equipment</fullName>
+        <default>false</default>
+        <label>Industrial measurement, sensing and control equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Infrastructure-Other</fullName>
+        <default>false</default>
+        <label>Infrastructure-Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Materials</fullName>
+        <default>false</default>
+        <label>Materials</label>
+    </customValue>
+    <customValue>
+        <fullName>Means of transport: manufacturing</fullName>
+        <default>false</default>
+        <label>Means of transport: manufacturing</label>
+    </customValue>
+    <customValue>
+        <fullName>Means of transport: repair and maintenance</fullName>
+        <default>false</default>
+        <label>Means of transport: repair and maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical devices and supplies</fullName>
+        <default>false</default>
+        <label>Medical devices and supplies</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical equipment</fullName>
+        <default>false</default>
+        <label>Medical equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Mixed farming</fullName>
+        <default>false</default>
+        <label>Mixed farming</label>
+    </customValue>
+    <customValue>
+        <fullName>Not in our scope</fullName>
+        <default>false</default>
+        <label>Not in our scope</label>
+    </customValue>
+    <customValue>
+        <fullName>Online platforms</fullName>
+        <default>false</default>
+        <label>Online platforms</label>
+    </customValue>
+    <customValue>
+        <fullName>Organic chemicals</fullName>
+        <default>false</default>
+        <label>Organic chemicals</label>
+    </customValue>
+    <customValue>
+        <fullName>Other consumer products manufacturing</fullName>
+        <default>false</default>
+        <label>Other consumer products manufacturing</label>
+    </customValue>
+    <customValue>
+        <fullName>Other consumer products retailing</fullName>
+        <default>false</default>
+        <label>Other consumer products retailing</label>
+    </customValue>
+    <customValue>
+        <fullName>Other consumer services</fullName>
+        <default>false</default>
+        <label>Other consumer services</label>
+    </customValue>
+    <customValue>
+        <fullName>Other consumer services &amp; Business and industrial services</fullName>
+        <default>false</default>
+        <label>Other consumer services &amp; Business and industrial services</label>
+    </customValue>
+    <customValue>
+        <fullName>Other energy</fullName>
+        <default>false</default>
+        <label>Other energy</label>
+    </customValue>
+    <customValue>
+        <fullName>Other environmental services (pollution measurement, noise abatement services, nature and landscape protection services … )</fullName>
+        <default>false</default>
+        <label>Other environmental services (pollution measurement, noise abatement services, nature and landscape protection services … )</label>
+    </customValue>
+    <customValue>
+        <fullName>Other financial services</fullName>
+        <default>false</default>
+        <label>Other financial services</label>
+    </customValue>
+    <customValue>
+        <fullName>Other manufacturing</fullName>
+        <default>false</default>
+        <label>Other manufacturing</label>
+    </customValue>
+    <customValue>
+        <fullName>Other software</fullName>
+        <default>false</default>
+        <label>Other software</label>
+    </customValue>
+    <customValue>
+        <fullName>Passenger transport</fullName>
+        <default>false</default>
+        <label>Passenger transport</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmaceuticals and drug delivery</fullName>
+        <default>false</default>
+        <label>Pharmaceuticals and drug delivery</label>
+    </customValue>
+    <customValue>
+        <fullName>Plastic</fullName>
+        <default>false</default>
+        <label>Plastic</label>
+    </customValue>
+    <customValue>
+        <fullName>Ports</fullName>
+        <default>false</default>
+        <label>Ports</label>
+    </customValue>
+    <customValue>
+        <fullName>Public services (excl. education)</fullName>
+        <default>false</default>
+        <label>Public services (excl. education)</label>
+    </customValue>
+    <customValue>
+        <fullName>Railways and metros</fullName>
+        <default>false</default>
+        <label>Railways and metros</label>
+    </customValue>
+    <customValue>
+        <fullName>Real estate</fullName>
+        <default>false</default>
+        <label>Real estate</label>
+    </customValue>
+    <customValue>
+        <fullName>Restaurants, food services</fullName>
+        <default>false</default>
+        <label>Restaurants, food services</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail of fashion products</fullName>
+        <default>false</default>
+        <label>Retail of fashion products</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail of food and beverages</fullName>
+        <default>false</default>
+        <label>Retail of food and beverages</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail of household articles</fullName>
+        <default>false</default>
+        <label>Retail of household articles</label>
+    </customValue>
+    <customValue>
+        <fullName>Roads and bridges</fullName>
+        <default>false</default>
+        <label>Roads and bridges</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Infrastructure</fullName>
+        <default>false</default>
+        <label>Social Infrastructure</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Infrastructure &amp; Environment (Infrastructure)</fullName>
+        <default>false</default>
+        <label>Social Infrastructure &amp; Environment (Infrastructure)</label>
+    </customValue>
+    <customValue>
+        <fullName>Sorting, recycling and processing of waste &amp; Environment Infrastructure</fullName>
+        <default>false</default>
+        <label>Sorting, recycling and processing of waste &amp; Environment Infrastructure</label>
+    </customValue>
+    <customValue>
+        <fullName>Specialty chemicals</fullName>
+        <default>false</default>
+        <label>Specialty chemicals</label>
+    </customValue>
+    <customValue>
+        <fullName>Specialty chemicals &amp; Organic chemicals</fullName>
+        <default>false</default>
+        <label>Specialty chemicals &amp; Organic chemicals</label>
+    </customValue>
+    <customValue>
+        <fullName>Telecom carriers</fullName>
+        <default>false</default>
+        <label>Telecom carriers</label>
+    </customValue>
+    <customValue>
+        <fullName>Telecom carriers &amp; Telecommunications Infrastructure</fullName>
+        <default>false</default>
+        <label>Telecom carriers &amp; Telecommunications Infrastructure</label>
+    </customValue>
+    <customValue>
+        <fullName>Textile fibres</fullName>
+        <default>false</default>
+        <label>Textile fibres</label>
+    </customValue>
+    <masterLabel>Sector</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
