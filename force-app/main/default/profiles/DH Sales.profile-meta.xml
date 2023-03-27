@@ -164,6 +164,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Sector__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Segment_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -310,6 +315,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Contact_Role__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Contact_Status_Icon__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Contact_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -499,6 +514,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Industry__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Sector__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Segment_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -523,16 +548,36 @@
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>Account-Corporate Account Record Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Corporate Account Record Layout</layout>
+        <recordType>Account.Corporate_Account</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Third Party Record Layout</layout>
+        <recordType>Account.Third_Party_Account</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Account_Sales_Team__c-Account Sales Team Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Contact-Contact Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Event-Event Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Global-Global Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Hotel__c-Hotel Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Opportunity-Opportunity Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Task-Task Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Terms_Conditions__c-Terms %26 Conditions Layout</layout>

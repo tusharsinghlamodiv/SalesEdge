@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Rate_Access_Code__c</fullName>
+    <fullName>Sector__c</fullName>
     <externalId>false</externalId>
-    <label>Booking Code</label>
-    <length>6</length>
+    <label>Sector</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>true</trackHistory>
-    <type>Text</type>
-    <unique>false</unique>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Sector</valueSetName>
+    </valueSet>
 </CustomField>
