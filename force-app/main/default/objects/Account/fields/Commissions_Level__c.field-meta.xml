@@ -5,7 +5,8 @@
     <label>Commissions Level</label>
     <precision>18</precision>
     <required>false</required>
-    <scale>0</scale>
+    <scale>2</scale>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
     <type>Percent</type>
 </CustomField>

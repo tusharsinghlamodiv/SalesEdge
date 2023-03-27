@@ -3,11 +3,12 @@
     <fullName>Account_Status_Icon__c</fullName>
     <externalId>false</externalId>
     <formula>IF(ISPICKVAL(Account_Status__c,&quot;Active&quot;),
-IMAGE(&quot;/resource/1679597296000/Icon_Active&quot;,&quot;Active&quot;,40,40),
-IMAGE(&quot;/resource/1679597287000/Icon_Inactive&quot;,&quot;Inactive&quot;,40,40))</formula>
+IMAGE(&quot;/resource/1679919173000/Icon_Active&quot;,&quot;Active&quot;,30,30),
+IMAGE(&quot;/resource/1679919179000/Icon_Inactive&quot;,&quot;Inactive&quot;,30,30))</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Account Status</label>
     <required>false</required>
+    <trackHistory>false</trackHistory>
     <type>Text</type>
     <unique>false</unique>
 </CustomField>

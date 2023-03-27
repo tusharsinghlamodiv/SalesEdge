@@ -49,6 +49,10 @@
                 <behavior>Edit</behavior>
                 <field>Distribution_Cost__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Rate_Access_Code__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -85,7 +89,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Rate_Access_Code__c</field>
+                <field>Sector__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -167,6 +171,31 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>FeedItem.TextPost</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>10</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>LogACall</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>SendEmail</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>7</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>NewTask</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>8</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>NewEvent</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>9</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>0</sortOrder>
@@ -195,31 +224,6 @@
             <actionName>FeedItem.ContentPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>5</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>LogACall</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>6</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>SendEmail</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>7</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>NewTask</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>8</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>NewEvent</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>9</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.TextPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>10</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>
@@ -334,6 +338,9 @@
         <fields>CONTRACT.END_DATE</fields>
         <fields>CONTRACT.STATUS</fields>
         <relatedList>RelatedContractList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <relatedList>RelatedEntityHistoryList</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
