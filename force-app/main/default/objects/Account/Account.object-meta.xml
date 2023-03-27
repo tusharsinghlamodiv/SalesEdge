@@ -232,13 +232,15 @@
     </actionOverrides>
     <compactLayoutAssignment>DH_Account</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <searchLayouts>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>PARENT_NAME</customTabListAdditionalFields>
-        <customTabListAdditionalFields>CORE.USERS.ALIAS</customTabListAdditionalFields>
         <customTabListAdditionalFields>Account_Management__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CORE.USERS.FIRST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CORE.USERS.LAST_NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.INDUSTRY</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.ADDRESS1_STREET</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.ADDRESS1_ZIP</customTabListAdditionalFields>
@@ -256,8 +258,9 @@
         <excludedStandardButtons>NavigateToAccountDiscoveryDashboard</excludedStandardButtons>
         <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>PARENT_NAME</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>CORE.USERS.ALIAS</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Account_Management__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USERS.FIRST_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USERS.LAST_NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.INDUSTRY</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.ADDRESS1_STREET</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.ADDRESS1_ZIP</lookupDialogsAdditionalFields>
@@ -270,8 +273,9 @@
         <lookupPhoneDialogsAdditionalFields>ACCOUNT.PHONE1</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>PARENT_NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Account_Management__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.FIRST_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.LAST_NAME</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.INDUSTRY</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_STREET</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_ZIP</searchResultsAdditionalFields>

@@ -5,6 +5,7 @@
     <label>Segment Code</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
     <type>MultiselectPicklist</type>
     <valueSet>
         <controllingField>Segment_Group__c</controllingField>
