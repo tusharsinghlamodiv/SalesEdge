@@ -6,5 +6,6 @@
     <fields>Phone</fields>
     <fields>Email</fields>
     <fields>OwnerId</fields>
+    <fields>Contact_Status_Icon__c</fields>
     <label>Contact Compact Layout</label>
 </CompactLayout>
