@@ -504,6 +504,317 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Sector__c</picklist>
+        <values>
+            <fullName>Application software %26 Systems software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Art galleries and related services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology laboratories and services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadcasting%2C publications and content providers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business and industrial products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business and industrial services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business and industrial services %26 Other consumer products manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business and industrial services %26 Other consumer products retailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals and materials%3A service related activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coal and metal ores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications%3A retail%2Fwholesale and repair activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Computer hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Computer%3A retail%2Fwholesale and repair activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction%3A related activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courier services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crop cultivation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data management services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Educational and training products%2Fservices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy related products and equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy related services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fashion industry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fishing%2C hunting and animal husbandry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food and beverages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forestry%2C logging and related services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight transport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gas and oil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare institutions and services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality%2C sports and entertainment facilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Household articles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Household furniture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hydroelectricity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hydroelectricity %26 Alternative energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hydroelectricity %26 Alternative energy %26 Infrastructure- Renewable Energy- Conventional Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial measurement%2C sensing and control equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infrastructure-Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Means of transport%3A manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Means of transport%3A repair and maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical devices and supplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mixed farming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not in our scope</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online platforms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other consumer products manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other consumer products retailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other consumer services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other consumer services %26 Business and industrial services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other environmental services %28pollution measurement%2C noise abatement services%2C nature and landscape protection services %E2%80%A6 %29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other financial services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Passenger transport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmaceuticals and drug delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plastic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public services %28excl%2E education%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Railways and metros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restaurants%2C food services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail of fashion products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail of food and beverages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail of household articles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roads and bridges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Infrastructure %26 Environment %28Infrastructure%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sorting%2C recycling and processing of waste %26 Environment Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialty chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialty chemicals %26 Organic chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecom carriers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecom carriers %26 Telecommunications Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Textile fibres</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Segment_Code__c</picklist>
         <values>
             <fullName>AHO</fullName>

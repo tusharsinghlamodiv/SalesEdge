@@ -5,6 +5,7 @@
     <label>Channel Group</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
     <type>Picklist</type>
     <valueSet>
         <controllingField>Channel_Global_Indicator__c</controllingField>
