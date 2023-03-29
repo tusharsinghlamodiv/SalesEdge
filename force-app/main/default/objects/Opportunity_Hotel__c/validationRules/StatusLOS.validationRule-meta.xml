@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>StatusLOS</fullName>
-    <active>true</active>
-    <errorConditionFormula>OR(ISPICKVAL(Status__c,&quot;UNC&quot;),ISPICKVAL(Status__c,&quot;LOS&quot;)) &amp;&amp;  ISBLANK(LOS_Reason__c)</errorConditionFormula>
-    <errorDisplayField>LOS_Reason__c</errorDisplayField>
-    <errorMessage>When status is UNC or LOS, LOS Reason is required.</errorMessage>
-</ValidationRule>

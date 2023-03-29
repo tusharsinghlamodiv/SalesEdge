@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>LossReason</fullName>
-    <active>true</active>
-    <errorConditionFormula>ISPICKVAL(Lost_Reason__c,&quot;Other&quot;) &amp;&amp;  ISBLANK(Loss_Reason_Info__c)</errorConditionFormula>
-    <errorDisplayField>Loss_Reason_Info__c</errorDisplayField>
-    <errorMessage>When choosing other Loss Reason Info is required.</errorMessage>
-</ValidationRule>
