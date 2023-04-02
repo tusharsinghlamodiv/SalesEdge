@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purpose__c</fullName>
+    <externalId>false</externalId>
+    <label>Purpose</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+                <label>Acquisition</label>
+            </value>
+            <value>
+                <fullName>Bring Back Old Business (BBOB)</fullName>
+                <default>false</default>
+                <label>Bring Back Old Business (BBOB)</label>
+            </value>
+            <value>
+                <fullName>Business Review Meeting</fullName>
+                <default>false</default>
+                <label>Business Review Meeting</label>
+            </value>
+            <value>
+                <fullName>Customer Advisory Board</fullName>
+                <default>false</default>
+                <label>Customer Advisory Board</label>
+            </value>
+            <value>
+                <fullName>Fam Triop</fullName>
+                <default>false</default>
+                <label>Fam Triop</label>
+            </value>
+            <value>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+                <label>Follow-up</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+                <label>Negotiation</label>
+            </value>
+            <value>
+                <fullName>Product Info</fullName>
+                <default>false</default>
+                <label>Product Info</label>
+            </value>
+            <value>
+                <fullName>Promotional</fullName>
+                <default>false</default>
+                <label>Promotional</label>
+            </value>
+            <value>
+                <fullName>Sales Mission</fullName>
+                <default>false</default>
+                <label>Sales Mission</label>
+            </value>
+            <value>
+                <fullName>Site Inspection</fullName>
+                <default>false</default>
+                <label>Site Inspection</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <valueName>Acquisition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <valueName>Bring Back Old Business (BBOB)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <valueName>Follow-up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <valueName>General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <valueName>Negotiation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Event</controllingFieldValue>
+            <valueName>Promotional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event</controllingFieldValue>
+            <valueName>Customer Advisory Board</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event</controllingFieldValue>
+            <valueName>Fam Triop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event</controllingFieldValue>
+            <valueName>Sales Mission</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event</controllingFieldValue>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <valueName>Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <valueName>Business Review Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <valueName>Site Inspection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <valueName>Product Info</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
