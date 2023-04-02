@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Department__c</fullName>
+    <externalId>false</externalId>
+    <label>Sales Department</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inhouse Sales</fullName>
+                <default>false</default>
+                <label>Inhouse Sales</label>
+            </value>
+            <value>
+                <fullName>International Sales</fullName>
+                <default>false</default>
+                <label>International Sales</label>
+            </value>
+            <value>
+                <fullName>KAM Sales</fullName>
+                <default>false</default>
+                <label>KAM Sales</label>
+            </value>
+            <value>
+                <fullName>Distribution Partnerships Individual Travel</fullName>
+                <default>false</default>
+                <label>Distribution Partnerships Individual Travel</label>
+            </value>
+            <value>
+                <fullName>Distribution Partnerships MICE&amp;Group Travel</fullName>
+                <default>false</default>
+                <label>Distribution Partnerships MICE&amp;Group Travel</label>
+            </value>
+            <value>
+                <fullName>Regional Sales BeNeLux</fullName>
+                <default>false</default>
+                <label>Regional Sales BeNeLux</label>
+            </value>
+            <value>
+                <fullName>Regional Sales AT,CH,EE</fullName>
+                <default>false</default>
+                <label>Regional Sales AT,CH,EE</label>
+            </value>
+            <value>
+                <fullName>Regional Sales Middle East</fullName>
+                <default>false</default>
+                <label>Regional Sales Middle East</label>
+            </value>
+            <value>
+                <fullName>Regional Sales Germany</fullName>
+                <default>false</default>
+                <label>Regional Sales Germany</label>
+            </value>
+            <value>
+                <fullName>Global Luxury Travel</fullName>
+                <default>false</default>
+                <label>Global Luxury Travel</label>
+            </value>
+            <value>
+                <fullName>B2B Marketing</fullName>
+                <default>false</default>
+                <label>B2B Marketing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
