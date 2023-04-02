@@ -3,10 +3,9 @@
     <fullName>LOS_Reason__c</fullName>
     <externalId>false</externalId>
     <label>LOS REASON (dnu)</label>
-    <length>2</length>
-    <required>false</required>
+    <length>256</length>
     <trackFeedHistory>false</trackFeedHistory>
     <trackTrending>false</trackTrending>
-    <type>Text</type>
-    <unique>false</unique>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
 </CustomField>
