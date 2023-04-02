@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Complimentary</fullName>
+        <default>false</default>
+        <label>Complimentary</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Contract Central Account</fullName>
+        <default>false</default>
+        <label>Corporate Contract Central Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Contract Government</fullName>
+        <default>false</default>
+        <label>Corporate Contract Government</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Contract Local Account</fullName>
+        <default>false</default>
+        <label>Corporate Contract Local Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Contract Long Stay</fullName>
+        <default>false</default>
+        <label>Corporate Contract Long Stay</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Group Business</fullName>
+        <default>false</default>
+        <label>Corporate Group Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Group Government</fullName>
+        <default>false</default>
+        <label>Corporate Group Government</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Group Sport &amp; Entertainment</fullName>
+        <default>false</default>
+        <label>Corporate Group Sport &amp; Entertainment</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Meeting Non Residential</fullName>
+        <default>false</default>
+        <label>Corporate Meeting Non Residential</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Meeting Residential</fullName>
+        <default>false</default>
+        <label>Corporate Meeting Residential</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Meeting Series</fullName>
+        <default>false</default>
+        <label>Corporate Meeting Series</label>
+    </customValue>
+    <customValue>
+        <fullName>Crew Airline</fullName>
+        <default>false</default>
+        <label>Crew Airline</label>
+    </customValue>
+    <customValue>
+        <fullName>Crew Deutsche Bahn</fullName>
+        <default>false</default>
+        <label>Crew Deutsche Bahn</label>
+    </customValue>
+    <customValue>
+        <fullName>Dayuse</fullName>
+        <default>false</default>
+        <label>Dayuse</label>
+    </customValue>
+    <customValue>
+        <fullName>House Use</fullName>
+        <default>false</default>
+        <label>House Use</label>
+    </customValue>
+    <customValue>
+        <fullName>Lay Over</fullName>
+        <default>false</default>
+        <label>Lay Over</label>
+    </customValue>
+    <customValue>
+        <fullName>Leisure Group Ad Hoc</fullName>
+        <default>false</default>
+        <label>Leisure Group Ad Hoc</label>
+    </customValue>
+    <customValue>
+        <fullName>Leisure Group Private</fullName>
+        <default>false</default>
+        <label>Leisure Group Private</label>
+    </customValue>
+    <customValue>
+        <fullName>Leisure Group Series</fullName>
+        <default>false</default>
+        <label>Leisure Group Series</label>
+    </customValue>
+    <customValue>
+        <fullName>Leisure Long Stay</fullName>
+        <default>false</default>
+        <label>Leisure Long Stay</label>
+    </customValue>
+    <customValue>
+        <fullName>Leisure Packages</fullName>
+        <default>false</default>
+        <label>Leisure Packages</label>
+    </customValue>
+    <customValue>
+        <fullName>Leisure Tour Operator Hotel  Account</fullName>
+        <default>false</default>
+        <label>Leisure Tour Operator Hotel  Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Leisure Tour Operator Key Account</fullName>
+        <default>false</default>
+        <label>Leisure Tour Operator Key Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Member BAR</fullName>
+        <default>false</default>
+        <label>Member BAR</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Promotion</fullName>
+        <default>false</default>
+        <label>Member Promotion</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Discount</fullName>
+        <default>false</default>
+        <label>Other Discount</label>
+    </customValue>
+    <customValue>
+        <fullName>Public BAR</fullName>
+        <default>false</default>
+        <label>Public BAR</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Promotion</fullName>
+        <default>false</default>
+        <label>Public Promotion</label>
+    </customValue>
+    <masterLabel>Segment Code Name</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
