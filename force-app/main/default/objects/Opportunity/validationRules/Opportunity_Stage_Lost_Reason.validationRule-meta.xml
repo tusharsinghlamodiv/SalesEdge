@@ -2,7 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Opportunity_Stage_Lost_Reason</fullName>
     <active>true</active>
-    <errorConditionFormula>AND(ISBLANK(TEXT(Lost_Reason__c)), OR(TEXT(StageName) = &quot;Closed Lost&quot;,TEXT(StageName) = &quot;Closed Denied&quot;))</errorConditionFormula>
+    <errorConditionFormula>AND(ISBLANK(TEXT(Lost_Reason__c)), TEXT(StageName) = &quot;Closed Lost&quot;)</errorConditionFormula>
     <errorDisplayField>Lost_Reason__c</errorDisplayField>
     <errorMessage>When &quot;Stage&quot; is selected as &quot;Closed Lost&quot; or &quot;Denied&quot; make Lost Reason field mandatory.</errorMessage>
 </ValidationRule>
