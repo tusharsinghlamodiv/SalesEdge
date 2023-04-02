@@ -153,9 +153,15 @@
             </value>
         </filters>
         <inputAssignments>
-            <field>LOS_Reason__c</field>
+            <field>Lost_Reason_Info__c</field>
             <value>
                 <stringValue>LOS</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lost_Reason__c</field>
+            <value>
+                <stringValue>Other</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
