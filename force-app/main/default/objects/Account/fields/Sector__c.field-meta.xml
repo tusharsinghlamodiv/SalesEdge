@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sector__c</fullName>
+    <externalId>false</externalId>
+    <label>Sector</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Industry__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Sector</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Human health and social work activities</controllingFieldValue>
+            <controllingFieldValue>Education</controllingFieldValue>
+            <valueName>Educational and training products/services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human health and social work activities</controllingFieldValue>
+            <valueName>Healthcare institutions and services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information and communication</controllingFieldValue>
+            <valueName>Application software &amp; Systems software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information and communication</controllingFieldValue>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <controllingFieldValue>Professional, scientific and technical activities</controllingFieldValue>
+            <valueName>Broadcasting, publications and content providers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information and communication</controllingFieldValue>
+            <valueName>Data management services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information and communication</controllingFieldValue>
+            <valueName>Online platforms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information and communication</controllingFieldValue>
+            <valueName>Other software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information and communication</controllingFieldValue>
+            <valueName>Telecom carriers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information and communication</controllingFieldValue>
+            <valueName>Telecom carriers &amp; Telecommunications Infrastructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Business and industrial products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <controllingFieldValue>Professional, scientific and technical activities</controllingFieldValue>
+            <controllingFieldValue>Transporting and storage</controllingFieldValue>
+            <controllingFieldValue>Administrative and support service activities</controllingFieldValue>
+            <controllingFieldValue>Electricity, gas, steam and air conditioning supply</controllingFieldValue>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Business and industrial services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Business and industrial services &amp; Other consumer products manufacturing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Communications equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Computer hardware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <controllingFieldValue>Administrative and support service activities</controllingFieldValue>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Construction: related activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Construction materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <valueName>Energy related products and equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Fashion industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Food and beverages</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <controllingFieldValue>Mining and quarrying</controllingFieldValue>
+            <controllingFieldValue>Electricity, gas, steam and air conditioning supply</controllingFieldValue>
+            <valueName>Gas and oil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Household articles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Household furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Industrial measurement, sensing and control equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Means of transport: manufacturing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <controllingFieldValue>Transporting and storage</controllingFieldValue>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Means of transport: repair and maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Medical devices and supplies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Medical equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <controllingFieldValue>Other services activities</controllingFieldValue>
+            <controllingFieldValue>Professional, scientific and technical activities</controllingFieldValue>
+            <controllingFieldValue>Transporting and storage</controllingFieldValue>
+            <controllingFieldValue>Arts, entertainment and recreation</controllingFieldValue>
+            <controllingFieldValue>Financial and insurance activities</controllingFieldValue>
+            <valueName>Not in our scope</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Organic chemicals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Other consumer products manufacturing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <controllingFieldValue>Other services activities</controllingFieldValue>
+            <controllingFieldValue>Professional, scientific and technical activities</controllingFieldValue>
+            <controllingFieldValue>Administrative and support service activities</controllingFieldValue>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Other consumer services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Other manufacturing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Pharmaceuticals and drug delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Plastic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Specialty chemicals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Specialty chemicals &amp; Organic chemicals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Textile fibres</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and quarrying</controllingFieldValue>
+            <valueName>Coal and metal ores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and quarrying</controllingFieldValue>
+            <valueName>Energy related services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and quarrying</controllingFieldValue>
+            <valueName>Materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other services activities</controllingFieldValue>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Communications: retail/wholesale and repair activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other services activities</controllingFieldValue>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Computer: retail/wholesale and repair activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional, scientific and technical activities</controllingFieldValue>
+            <valueName>Biotechnology laboratories and services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public administration and defence; compulsory social security</controllingFieldValue>
+            <valueName>Public services (excl. education)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real estate activities</controllingFieldValue>
+            <valueName>Real estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transporting and storage</controllingFieldValue>
+            <valueName>Courier services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transporting and storage</controllingFieldValue>
+            <valueName>Freight transport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transporting and storage</controllingFieldValue>
+            <valueName>Other energy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transporting and storage</controllingFieldValue>
+            <valueName>Passenger transport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accommodation and food service activities</controllingFieldValue>
+            <controllingFieldValue>Administrative and support service activities</controllingFieldValue>
+            <controllingFieldValue>Arts, entertainment and recreation</controllingFieldValue>
+            <valueName>Hospitality, sports and entertainment facilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accommodation and food service activities</controllingFieldValue>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Restaurants, food services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative and support service activities</controllingFieldValue>
+            <valueName>Other consumer services &amp; Business and industrial services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture, forestry and fishing</controllingFieldValue>
+            <valueName>Crop cultivation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture, forestry and fishing</controllingFieldValue>
+            <valueName>Fishing, hunting and animal husbandry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture, forestry and fishing</controllingFieldValue>
+            <valueName>Forestry, logging and related services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture, forestry and fishing</controllingFieldValue>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Mixed farming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arts, entertainment and recreation</controllingFieldValue>
+            <valueName>Art galleries and related services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <valueName>Hydroelectricity &amp; Alternative energy &amp; Infrastructure- Renewable Energy- Conventional Energy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <valueName>Infrastructure-Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <valueName>Ports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <valueName>Railways and metros</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <valueName>Roads and bridges</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <valueName>Social Infrastructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <valueName>Social Infrastructure &amp; Environment (Infrastructure)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electricity, gas, steam and air conditioning supply</controllingFieldValue>
+            <valueName>Hydroelectricity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electricity, gas, steam and air conditioning supply</controllingFieldValue>
+            <valueName>Hydroelectricity &amp; Alternative energy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Water supply; sewerage; waste management and remediation activities</controllingFieldValue>
+            <valueName>Other environmental services (pollution measurement, noise abatement services, nature and landscape protection services … )</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Water supply; sewerage; waste management and remediation activities</controllingFieldValue>
+            <valueName>Sorting, recycling and processing of waste &amp; Environment Infrastructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial and insurance activities</controllingFieldValue>
+            <valueName>Banks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial and insurance activities</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial and insurance activities</controllingFieldValue>
+            <valueName>Other financial services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Business and industrial services &amp; Other consumer products retailing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Chemicals and materials: service related activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Other consumer products retailing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Retail of fashion products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Retail of food and beverages</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale and retail trade; repair of motor vehicles and motorcycles</controllingFieldValue>
+            <valueName>Retail of household articles</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
