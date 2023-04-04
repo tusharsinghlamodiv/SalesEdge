@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>simpli_lv__Apex_Class_Name__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The apex class that this action calls. The apex class must implement the SimpliListViewsAction interface.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The apex class that this action calls. The apex class must implement the SimpliListViewsAction interface.</inlineHelpText>
+    <label>Apex Class Name</label>
+    <length>255</length>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

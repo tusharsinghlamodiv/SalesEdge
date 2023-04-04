@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>simpli_lv__All_Core_Security</fullName>
+    <columns>NAME</columns>
+    <columns>simpli_lv__Primary_Key__c</columns>
+    <columns>simpli_lv__Label__c</columns>
+    <columns>simpli_lv__Object_Name__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>simpli_lv__Is_Private__c</columns>
+    <columns>simpli_lv__Is_Non_Editable__c</columns>
+    <columns>simpli_lv__Boolean_Filter__c</columns>
+    <columns>simpli_lv__Filter_Scope__c</columns>
+    <columns>simpli_lv__Groups__c</columns>
+    <columns>simpli_lv__Roles__c</columns>
+    <columns>simpli_lv__Roles_And_Subordinates__c</columns>
+    <columns>simpli_lv__Territories__c</columns>
+    <columns>simpli_lv__All_Internal_Users__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>simpli_lv__List_View__c.simpli_lv__Core</value>
+    </filters>
+    <label>All Core - Security</label>
+</ListView>
