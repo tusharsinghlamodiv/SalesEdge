@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>simpli_lv__Filter_Scope__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This field indicates whether you are filtering by owner or viewing all records.
+
+Everything - All records, for example All Opportunities.
+Mine - Records owned by the user running the list view, for example My Opportunities.
+MineAndMyGroups - Records owned by the user running the list view, and records assigned to the user’s queues.
+Queue - Records assigned to a queue.
+Delegated - Records delegated to another user for action: for example, a delegated task.
+MyTerritory - Records in the territory of the user seeing the list view. This option is available if territory management is enabled for your organization.
+MyTeamTerritory - Records in the territory of the team of the user seeing the list view. This option is available if territory management is enabled for your organization.
+Team - Records assigned to a team.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Options are - Everything, Mine, MineAndMyGroups, Queue, Delegated, MyTerritory, MyTeamTerritory, Team</inlineHelpText>
+    <label>Filter Scope</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Everything</fullName>
+                <default>false</default>
+                <label>Everything</label>
+            </value>
+            <value>
+                <fullName>Mine</fullName>
+                <default>false</default>
+                <label>Mine</label>
+            </value>
+            <value>
+                <fullName>MineAndMyGroups</fullName>
+                <default>false</default>
+                <label>MineAndMyGroups</label>
+            </value>
+            <value>
+                <fullName>Queue</fullName>
+                <default>false</default>
+                <label>Queue</label>
+            </value>
+            <value>
+                <fullName>Delegated</fullName>
+                <default>false</default>
+                <label>Delegated</label>
+            </value>
+            <value>
+                <fullName>MyTerritory</fullName>
+                <default>false</default>
+                <label>MyTerritory</label>
+            </value>
+            <value>
+                <fullName>MyTeamTerritory</fullName>
+                <default>false</default>
+                <label>MyTeamTerritory</label>
+            </value>
+            <value>
+                <fullName>Team</fullName>
+                <default>false</default>
+                <label>Team</label>
+            </value>
+            <value>
+                <fullName>SalesTeam</fullName>
+                <default>false</default>
+                <label>SalesTeam</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

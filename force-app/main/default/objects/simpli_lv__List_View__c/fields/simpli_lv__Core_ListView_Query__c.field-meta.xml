@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>simpli_lv__Core_ListView_Query__c</fullName>
+    <deprecated>false</deprecated>
+    <description>For CORE list views this contains the query provided by the core Salesforce list view. For MANUAL list views the query must be supplied. For TOOLING or METADATA list views this is not required.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For CORE list views this contains the query provided by the core Salesforce list view. For MANUAL list views the query must be supplied. For TOOLING or METADATA list views this is not required.</inlineHelpText>
+    <label>ListView Query</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>
