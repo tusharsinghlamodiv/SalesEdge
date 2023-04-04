@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>simpli_lv__Boolean_Filter__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This field represents an Advanced Option for a filter. Advanced Options in filters allow you to build up filtering conditions that use a mixture of AND and OR boolean operators across multiple filter line items. For example, (1 AND 2) OR 3 finds records that match both the first two filter line items or the third.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field represents an Advanced Option for a filter. Advanced Options in filters allow you to build up filtering conditions that use a mixture of AND and OR boolean operators across multiple filter line items. For example, (1 AND 2) OR 3 etc.</inlineHelpText>
+    <label>Boolean Filter</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

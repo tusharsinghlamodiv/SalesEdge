@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>simpli_lv__Territories_And_Subordinates__c</fullName>
+    <deprecated>false</deprecated>
+    <description>A list of territories with sharing access. All territories below each of these territories in the territory hierarchy also have sharing access.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A list of territories with sharing access. All territories below each of these territories in the territory hierarchy also have sharing access.</inlineHelpText>
+    <label>Territories And Subordinates</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

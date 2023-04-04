@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>simpli_lv__Core</fullName>
+    <active>true</active>
+    <description>Indicates the action is for SFDC core list views</description>
+    <label>Core</label>
+    <picklistValues>
+        <picklist>simpli_lv__Flow_Type__c</picklist>
+        <values>
+            <fullName>Autolaunched Flow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen Flow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>simpli_lv__Permissions__c</picklist>
+        <values>
+            <fullName>Create</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Edit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Read</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>simpli_lv__Selected_Record_Visibility__c</picklist>
+        <values>
+            <fullName>Always displayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Displayed if multiple records are selected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Displayed if no records are selected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Displayed if one or more records are selected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Displayed if one record is selected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Displayed if zero or one record is selected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>simpli_lv__Subtype__c</picklist>
+        <values>
+            <fullName>Manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metadata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tooling</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

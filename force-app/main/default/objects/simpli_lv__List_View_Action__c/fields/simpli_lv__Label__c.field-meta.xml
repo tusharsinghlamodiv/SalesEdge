@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>simpli_lv__Label__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The label that is shown in the drop down action combobox on the list views page.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The label that is shown in the drop down action combobox on the list views page.</inlineHelpText>
+    <label>Label</label>
+    <length>255</length>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
