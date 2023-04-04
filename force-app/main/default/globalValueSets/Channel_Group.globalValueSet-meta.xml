@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>HCC</fullName>
+        <default>false</default>
+        <label>HCC</label>
+    </customValue>
+    <customValue>
+        <fullName>HGDS</fullName>
+        <default>false</default>
+        <label>HGDS</label>
+    </customValue>
+    <customValue>
+        <fullName>HIT</fullName>
+        <default>false</default>
+        <label>HIT</label>
+    </customValue>
+    <customValue>
+        <fullName>HOF</fullName>
+        <default>false</default>
+        <label>HOF</label>
+    </customValue>
+    <customValue>
+        <fullName>HON</fullName>
+        <default>false</default>
+        <label>HON</label>
+    </customValue>
+    <customValue>
+        <fullName>HOTA</fullName>
+        <default>false</default>
+        <label>HOTA</label>
+    </customValue>
+    <customValue>
+        <fullName>HOTAO</fullName>
+        <default>false</default>
+        <label>HOTAO</label>
+    </customValue>
+    <customValue>
+        <fullName>PDR</fullName>
+        <default>false</default>
+        <label>PDR</label>
+    </customValue>
+    <masterLabel>Channel Group</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
