@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>If Channel code name is updated then the other Channel fields may need to be populated.</description>
+        <name>Channel_Code_Name_Updated</name>
+        <label>Channel Code Name Updated?</label>
+        <locationX>182</locationX>
+        <locationY>455</locationY>
+        <defaultConnector>
+            <targetReference>Segment_Code_Name_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome - No - Channel code name NOT updated</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Channel_code_name_updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Channel_Code_Name__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Populate_Channel_Fields</targetReference>
+            </connector>
+            <label>Yes - Channel code name updated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Call sub flow that updates the Segment fields based on the Segment Code Name entered.</description>
+        <name>Segment_Code_Name_Updated</name>
+        <label>Segment Code Name Updated?</label>
+        <locationX>182</locationX>
+        <locationY>791</locationY>
+        <defaultConnectorLabel>Default Outcome - No - Segment Code Name Not Updated</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Segment_Code_Name_Updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Segment_Code_Name__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Segment_Fields</targetReference>
+            </connector>
+            <label>Yes - Segment Code Name Updated</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>AppendDHConnectLink</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.T_C_DH_Connect_Link__c} + SUBSTITUTE({!$Record.Name},&apos; &apos;, &apos;+&apos;)</expression>
+    </formulas>
+    <interviewLabel>Account on Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account on Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_DH_Connect_Link</name>
+        <label>Update DH Connect Link</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <connector>
+            <targetReference>Channel_Code_Name_Updated</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>T_C_DH_Connect_Link__c</field>
+            <value>
+                <elementReference>AppendDHConnectLink</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_DH_Connect_Link</targetReference>
+        </connector>
+        <object>Account</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Call sub flow that populates the Channel fields based on the Channel Code Name entered.</description>
+        <name>Populate_Channel_Fields</name>
+        <label>Populate Channel Fields</label>
+        <locationX>50</locationX>
+        <locationY>575</locationY>
+        <connector>
+            <targetReference>Segment_Code_Name_Updated</targetReference>
+        </connector>
+        <flowName>Process_Update_Channel_Related_Fields</flowName>
+        <inputAssignments>
+            <name>var_in_channelValues</name>
+            <value>
+                <elementReference>$Record.Channel_Code_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_in_recordIdToUpdate</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Call sub flow that updates the Segment fields based on the Segment Code Name entered.</description>
+        <name>Update_Segment_Fields</name>
+        <label>Update Segment Fields</label>
+        <locationX>50</locationX>
+        <locationY>911</locationY>
+        <flowName>Process_Update_Segment_Related_Fields</flowName>
+        <inputAssignments>
+            <name>var_in_segmentValues</name>
+            <value>
+                <elementReference>$Record.Segment_Code_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_recordIdToUpdate</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>
