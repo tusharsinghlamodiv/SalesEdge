@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>simpli_lv__List_View_Config__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The list view config that this parameter is asociated with.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The list view config that this parameter is asociated with.</inlineHelpText>
+    <label>List View Config</label>
+    <referenceTo>simpli_lv__List_View_Config__c</referenceTo>
+    <relationshipLabel>List View Config Parameters</relationshipLabel>
+    <relationshipName>List_View_Config_Parameters</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>
