@@ -4,7 +4,7 @@
         <name>Update_Account_on_Stage_Change</name>
         <label>Update Account on Stage Change</label>
         <locationX>314</locationX>
-        <locationY>335</locationY>
+        <locationY>1127</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
@@ -27,10 +27,83 @@
     </actionCalls>
     <apiVersion>57.0</apiVersion>
     <decisions>
+        <description>If channel code name is updated  then the other channel fields may need to be updated.</description>
+        <name>Channel_Code_Name_Updated</name>
+        <label>Channel Code Name Updated?</label>
+        <locationX>578</locationX>
+        <locationY>671</locationY>
+        <defaultConnector>
+            <targetReference>Is_the_Opportunity_Stage_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome - No - Segment code name not updated</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Channel_code_name_updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Channel_Code_Name__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Channel_Fields</targetReference>
+            </connector>
+            <label>Yes - Channel code name updated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_the_Opportunity_Stage_Changed</name>
+        <label>Is the Opportunity Stage Changed?</label>
+        <locationX>578</locationX>
+        <locationY>1007</locationY>
+        <defaultConnectorLabel>Default Outcome - No - Opportunity Stage NOT Changed</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Opportunity_Stage_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account_on_Stage_Change</targetReference>
+            </connector>
+            <label>Yes - Opportunity Stage Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Segment_Code_Name_Updated</name>
+        <label>Segment Code Name Updated?</label>
+        <locationX>578</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Channel_Code_Name_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome - No - Segment Code Name Not Updated</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Segment_Code_Name_Updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Segment_Code_Name__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Segment_Fields</targetReference>
+            </connector>
+            <label>Yes - Segment Code Name Updated</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Stage</name>
         <label>Stage?</label>
         <locationX>314</locationX>
-        <locationY>455</locationY>
+        <locationY>1247</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Closed_Lost</name>
@@ -89,7 +162,7 @@
         <name>Update_Oppty_Hotel_Records_to_LOS</name>
         <label>Update Oppty Hotel Records to LOS</label>
         <locationX>50</locationX>
-        <locationY>575</locationY>
+        <locationY>1367</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Opportunity__c</field>
@@ -122,7 +195,7 @@
         <name>Update_Oppty_Hotel_Records_to_UNC</name>
         <label>Update Oppty Hotel Records to UNC</label>
         <locationX>314</locationX>
-        <locationY>575</locationY>
+        <locationY>1367</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Opportunity__c</field>
@@ -152,14 +225,28 @@
         <object>Opportunity_Hotel__c</object>
     </recordUpdates>
     <start>
-        <locationX>188</locationX>
+        <locationX>452</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_Account_on_Stage_Change</targetReference>
+            <targetReference>Segment_Code_Name_Updated</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>or</filterLogic>
         <filters>
             <field>StageName</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Segment_Code_Name__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Channel_Code_Name__c</field>
             <operator>IsChanged</operator>
             <value>
                 <booleanValue>true</booleanValue>
@@ -170,4 +257,50 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <subflows>
+        <description>Call sub flow that populates the Channel fields based on the Channel Code Name entered.</description>
+        <name>Update_Channel_Fields</name>
+        <label>Update Channel Fields</label>
+        <locationX>446</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>Is_the_Opportunity_Stage_Changed</targetReference>
+        </connector>
+        <flowName>Process_Update_Channel_Related_Fields</flowName>
+        <inputAssignments>
+            <name>var_in_channelValues</name>
+            <value>
+                <elementReference>$Record.Channel_Code_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_in_recordIdToUpdate</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Call sub flow that populates the Segment fields based on the Segment Code Name entered.</description>
+        <name>Update_Segment_Fields</name>
+        <label>Update Segment Fields</label>
+        <locationX>446</locationX>
+        <locationY>455</locationY>
+        <connector>
+            <targetReference>Channel_Code_Name_Updated</targetReference>
+        </connector>
+        <flowName>Process_Update_Segment_Related_Fields</flowName>
+        <inputAssignments>
+            <name>var_in_segmentValues</name>
+            <value>
+                <elementReference>$Record.Segment_Code_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_recordIdToUpdate</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
 </Flow>

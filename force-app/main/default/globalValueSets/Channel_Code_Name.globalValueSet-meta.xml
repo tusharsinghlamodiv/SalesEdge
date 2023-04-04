@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Agoda</fullName>
+        <default>false</default>
+        <label>Agoda</label>
+    </customValue>
+    <customValue>
+        <fullName>Amadeus</fullName>
+        <default>false</default>
+        <label>Amadeus</label>
+    </customValue>
+    <customValue>
+        <fullName>APP</fullName>
+        <default>false</default>
+        <label>APP</label>
+    </customValue>
+    <customValue>
+        <fullName>B2B</fullName>
+        <default>false</default>
+        <label>B2B</label>
+    </customValue>
+    <customValue>
+        <fullName>Booked</fullName>
+        <default>false</default>
+        <label>Booked</label>
+    </customValue>
+    <customValue>
+        <fullName>Booking</fullName>
+        <default>false</default>
+        <label>Booking</label>
+    </customValue>
+    <customValue>
+        <fullName>Call Center</fullName>
+        <default>false</default>
+        <label>Call Center</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Group&amp; Meeting Desk</fullName>
+        <default>false</default>
+        <label>Central Group&amp; Meeting Desk</label>
+    </customValue>
+    <customValue>
+        <fullName>CTrip</fullName>
+        <default>false</default>
+        <label>CTrip</label>
+    </customValue>
+    <customValue>
+        <fullName>Derbysoft</fullName>
+        <default>false</default>
+        <label>Derbysoft</label>
+    </customValue>
+    <customValue>
+        <fullName>DerbySoft MetaSearch</fullName>
+        <default>false</default>
+        <label>DerbySoft MetaSearch</label>
+    </customValue>
+    <customValue>
+        <fullName>Destinations of the World</fullName>
+        <default>false</default>
+        <label>Destinations of the World</label>
+    </customValue>
+    <customValue>
+        <fullName>Dhisco</fullName>
+        <default>false</default>
+        <label>Dhisco</label>
+    </customValue>
+    <customValue>
+        <fullName>DH Web</fullName>
+        <default>false</default>
+        <label>DH Web</label>
+    </customValue>
+    <customValue>
+        <fullName>eLong</fullName>
+        <default>false</default>
+        <label>eLong</label>
+    </customValue>
+    <customValue>
+        <fullName>E-Reception</fullName>
+        <default>false</default>
+        <label>E-Reception</label>
+    </customValue>
+    <customValue>
+        <fullName>Expedia</fullName>
+        <default>false</default>
+        <label>Expedia</label>
+    </customValue>
+    <customValue>
+        <fullName>Fliggy Online Store</fullName>
+        <default>false</default>
+        <label>Fliggy Online Store</label>
+    </customValue>
+    <customValue>
+        <fullName>Galileo</fullName>
+        <default>false</default>
+        <label>Galileo</label>
+    </customValue>
+    <customValue>
+        <fullName>GDS(Unclassified)</fullName>
+        <default>false</default>
+        <label>GDS(Unclassified)</label>
+    </customValue>
+    <customValue>
+        <fullName>Google Direct Book</fullName>
+        <default>false</default>
+        <label>Google Direct Book</label>
+    </customValue>
+    <customValue>
+        <fullName>Hotelbeds</fullName>
+        <default>false</default>
+        <label>Hotelbeds</label>
+    </customValue>
+    <customValue>
+        <fullName>HotelsCombined</fullName>
+        <default>false</default>
+        <label>HotelsCombined</label>
+    </customValue>
+    <customValue>
+        <fullName>HotelSpecials</fullName>
+        <default>false</default>
+        <label>HotelSpecials</label>
+    </customValue>
+    <customValue>
+        <fullName>HRS</fullName>
+        <default>false</default>
+        <label>HRS</label>
+    </customValue>
+    <customValue>
+        <fullName>Kiosk</fullName>
+        <default>false</default>
+        <label>Kiosk</label>
+    </customValue>
+    <customValue>
+        <fullName>Meituan</fullName>
+        <default>false</default>
+        <label>Meituan</label>
+    </customValue>
+    <customValue>
+        <fullName>OTA (Unclassified)</fullName>
+        <default>false</default>
+        <label>OTA (Unclassified)</label>
+    </customValue>
+    <customValue>
+        <fullName>Qunar</fullName>
+        <default>false</default>
+        <label>Qunar</label>
+    </customValue>
+    <customValue>
+        <fullName>RateGain</fullName>
+        <default>false</default>
+        <label>RateGain</label>
+    </customValue>
+    <customValue>
+        <fullName>Rate Tiger</fullName>
+        <default>false</default>
+        <label>Rate Tiger</label>
+    </customValue>
+    <customValue>
+        <fullName>Reception</fullName>
+        <default>false</default>
+        <label>Reception</label>
+    </customValue>
+    <customValue>
+        <fullName>Sabre</fullName>
+        <default>false</default>
+        <label>Sabre</label>
+    </customValue>
+    <customValue>
+        <fullName>Secret Escapes</fullName>
+        <default>false</default>
+        <label>Secret Escapes</label>
+    </customValue>
+    <customValue>
+        <fullName>SynXis</fullName>
+        <default>false</default>
+        <label>SynXis</label>
+    </customValue>
+    <customValue>
+        <fullName>Tuniu</fullName>
+        <default>false</default>
+        <label>Tuniu</label>
+    </customValue>
+    <customValue>
+        <fullName>WAP</fullName>
+        <default>false</default>
+        <label>WAP</label>
+    </customValue>
+    <customValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </customValue>
+    <customValue>
+        <fullName>WeChat Mini Program</fullName>
+        <default>false</default>
+        <label>WeChat Mini Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Worldspan</fullName>
+        <default>false</default>
+        <label>Worldspan</label>
+    </customValue>
+    <masterLabel>Channel Code Name</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
