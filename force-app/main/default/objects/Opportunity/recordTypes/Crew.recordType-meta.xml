@@ -5,6 +5,169 @@
     <businessProcess>DH</businessProcess>
     <label>Crew</label>
     <picklistValues>
+        <picklist>Channel_Code_Name__c</picklist>
+        <values>
+            <fullName>APP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agoda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amadeus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTrip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Group%26 Meeting Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DH Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DerbySoft MetaSearch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derbysoft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Destinations of the World</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dhisco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Reception</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expedia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fliggy Online Store</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GDS%28Unclassified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Galileo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Direct Book</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HotelSpecials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotelbeds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HotelsCombined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kiosk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meituan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTA %28Unclassified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qunar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rate Tiger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RateGain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reception</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sabre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secret Escapes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SynXis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tuniu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WeChat Mini Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Worldspan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eLong</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Channel_Code__c</picklist>
         <values>
             <fullName>AGODA</fullName>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Corporate Meeting Series</label>
+    <protected>false</protected>
+    <values>
+        <field>Description__c</field>
+        <value xsi:type="xsd:string">Business Meeting / Event in the hotel (main purpose, booking series – min. 3 different Dates / Year, excl. alternative dates)</value>
+    </values>
+    <values>
+        <field>Segment_Code_Name__c</field>
+        <value xsi:type="xsd:string">Corporate Meeting Series</value>
+    </values>
+    <values>
+        <field>Segment_Code__c</field>
+        <value xsi:type="xsd:string">GASQ</value>
+    </values>
+    <values>
+        <field>Segment_Global_Indicator__c</field>
+        <value xsi:type="xsd:string">Group</value>
+    </values>
+    <values>
+        <field>Segment_Group__c</field>
+        <value xsi:type="xsd:string">MICE</value>
+    </values>
+</CustomMetadata>
