@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>simpli_lv__All_Exceptions_Today</fullName>
+    <columns>NAME</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>simpli_lv__Running_User__c</columns>
+    <columns>simpli_lv__Type__c</columns>
+    <columns>simpli_lv__Subtype__c</columns>
+    <columns>simpli_lv__Message__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>simpli_lv__Type__c</field>
+        <operation>equals</operation>
+        <value>Exception</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>All Exceptions (Today)</label>
+</ListView>
