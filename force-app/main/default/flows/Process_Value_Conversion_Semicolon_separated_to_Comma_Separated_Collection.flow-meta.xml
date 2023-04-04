@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Add_First_Value_into_Output_Collection_0</name>
+        <label>Add First Value into Output Collection</label>
+        <locationX>50</locationX>
+        <locationY>398</locationY>
+        <assignmentItems>
+            <assignToReference>var_singleValue</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_for_singleValue</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_out_commaSeparatedValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>var_singleValue</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_Selected_Values_list_to_Updated_Selected_Values_0</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Add semicolon at the end of the input variable. This flow would use the semicolons to find/separate values. The semicolon at the end of the string will help us find the last value.</description>
+        <name>Add_Semicolon_at_the_end_of_input_variable</name>
+        <label>Add Semicolon at the end of input variable</label>
+        <locationX>182</locationX>
+        <locationY>158</locationY>
+        <assignmentItems>
+            <assignToReference>var_selectedValues</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_in_semiColumnSeparatedValues</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_selectedValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>;</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selected_Values_List_Has_Value</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set Selected values to the updated selected values</description>
+        <name>Set_Selected_Values_list_to_Updated_Selected_Values_0</name>
+        <label>Set Selected Values list to Updated Selected Values</label>
+        <locationX>50</locationX>
+        <locationY>518</locationY>
+        <assignmentItems>
+            <assignToReference>var_selectedValues</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_for_updateSelectedValues</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Selected_Values_List_Has_Value</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Decision to iterate through and add values to the output field if the new selected values list is not null</description>
+        <name>Selected_Values_List_Has_Value</name>
+        <label>Selected Values List Has Value?</label>
+        <locationX>182</locationX>
+        <locationY>278</locationY>
+        <defaultConnectorLabel>Default Outcome - Selected Values - Null</defaultConnectorLabel>
+        <rules>
+            <name>Selected_Values_Not_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>var_selectedValues</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_First_Value_into_Output_Collection_0</targetReference>
+            </connector>
+            <label>Selected Values - Not Null</label>
+        </rules>
+    </decisions>
+    <description>Process that can be used to convert a multi select picklist or a semicolon separated list to a comma separated list or a collection.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula to extract the first value</description>
+        <name>var_for_singleValue</name>
+        <dataType>String</dataType>
+        <expression>TRIM(                                                                                                         
+SUBSTITUTE(
+LEFT( {!var_selectedValues} , FIND(&quot;;&quot;,  {!var_selectedValues} )),
+&quot;;&quot;,                                                                                          
+&quot;&quot;))</expression>
+    </formulas>
+    <formulas>
+        <name>var_for_updateSelectedValues</name>
+        <dataType>String</dataType>
+        <expression>TRIM(
+SUBSTITUTE( {!var_selectedValues} , {!var_singleValue}+&quot;;&quot; ,  &quot;&quot;  )
+)</expression>
+    </formulas>
+    <interviewLabel>Process: Value Conversion: Semicolon separated to Comma Separated Collection {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Process: Value Conversion: Semicolon separated to Comma Separated Collection</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Add_Semicolon_at_the_end_of_input_variable</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Input variable which holds the values from the multiselect picklist field. The values maybe are semicolon separated.</description>
+        <name>var_in_semiColumnSeparatedValues</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Output of the process where semicolon separated input is converted to a comma separated collection.</description>
+        <name>var_out_commaSeparatedValues</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>var_selectedValues</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_singleValue</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
