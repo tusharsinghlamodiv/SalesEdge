@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Public Promotion</label>
+    <protected>false</protected>
+    <values>
+        <field>Description__c</field>
+        <value xsi:type="xsd:string">Non-Member travelling  without a contracted rate, who books a discounted rate (Advanced Purchse, Promotional Rate) (incl. Merchant /OTA)</value>
+    </values>
+    <values>
+        <field>Segment_Code_Name__c</field>
+        <value xsi:type="xsd:string">Public Promotion</value>
+    </values>
+    <values>
+        <field>Segment_Code__c</field>
+        <value xsi:type="xsd:string">PROMP</value>
+    </values>
+    <values>
+        <field>Segment_Global_Indicator__c</field>
+        <value xsi:type="xsd:string">Individual</value>
+    </values>
+    <values>
+        <field>Segment_Group__c</field>
+        <value xsi:type="xsd:string">DSC</value>
+    </values>
+</CustomMetadata>
