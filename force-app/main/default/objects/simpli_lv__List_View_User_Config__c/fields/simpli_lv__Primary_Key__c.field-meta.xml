@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>simpli_lv__Primary_Key__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <deprecated>false</deprecated>
+    <description>Primary key for the list view user config object. Current format is as follows - User.Id + &apos;:&apos; + List_View_Component_Name + Parameter_Name. This value will be set internally.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Primary key for the list view user config object. Current format is as follows - User.Id + &apos;:&apos; + List_View_Component_Name + Parameter_Name. This value will be set internally.</inlineHelpText>
+    <label>Primary Key</label>
+    <length>255</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>
