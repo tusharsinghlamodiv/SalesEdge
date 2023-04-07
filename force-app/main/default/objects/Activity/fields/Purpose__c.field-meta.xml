@@ -31,9 +31,9 @@
                 <label>Customer Advisory Board</label>
             </value>
             <value>
-                <fullName>Fam Triop</fullName>
+                <fullName>Family Trip</fullName>
                 <default>false</default>
-                <label>Fam Triop</label>
+                <label>Family Trip</label>
             </value>
             <value>
                 <fullName>Follow-up</fullName>
@@ -75,6 +75,12 @@
                 <default>false</default>
                 <label>Training</label>
             </value>
+            <value>
+                <fullName>Fam Triop</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fam Triop</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Call</controllingFieldValue>
@@ -106,10 +112,6 @@
         <valueSettings>
             <controllingFieldValue>Event</controllingFieldValue>
             <valueName>Customer Advisory Board</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Event</controllingFieldValue>
-            <valueName>Fam Triop</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Event</controllingFieldValue>
