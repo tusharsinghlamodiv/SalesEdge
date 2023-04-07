@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>City__c</fullName>
+    <fullName>Segment_Code__c</fullName>
     <externalId>false</externalId>
-    <label>City</label>
+    <label>Segment Code</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
-    <type>MultiselectPicklist</type>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
     <valueSet>
         <restricted>true</restricted>
-        <valueSetName>City</valueSetName>
+        <valueSetName>Segment_Code</valueSetName>
     </valueSet>
-    <visibleLines>4</visibleLines>
 </CustomField>
