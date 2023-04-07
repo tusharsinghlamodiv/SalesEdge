@@ -14,7 +14,7 @@
         <inputParameters>
             <name>text</name>
             <value>
-                <elementReference>$Record.StageName</elementReference>
+                <elementReference>MsgOpptyStageUpdate</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -137,6 +137,11 @@
         </rules>
     </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>MsgOpptyStageUpdate</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Name} + &apos; stage changed from &apos; + TEXT({!$Record__Prior.StageName}) + &apos; to &apos; +  TEXT({!$Record.StageName})</expression>
+    </formulas>
     <interviewLabel>Opportunity Updates on Update {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Opportunity Updates on Update</label>
     <processMetadataValues>
