@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Business_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Account Business Type</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>Merchant</fullName>
+                <default>false</default>
+                <label>Merchant</label>
+            </value>
+            <value>
+                <fullName>Tour Operator</fullName>
+                <default>false</default>
+                <label>Tour Operator</label>
+            </value>
+            <value>
+                <fullName>MICE</fullName>
+                <default>false</default>
+                <label>MICE</label>
+            </value>
+            <value>
+                <fullName>Transient</fullName>
+                <default>false</default>
+                <label>Transient</label>
+            </value>
+            <value>
+                <fullName>MICE/Transient</fullName>
+                <default>false</default>
+                <label>MICE/Transient</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
