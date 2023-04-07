@@ -4,6 +4,7 @@
     <externalId>false</externalId>
     <label>Focus Brands</label>
     <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
     <type>MultiselectPicklist</type>
     <valueSet>
         <restricted>true</restricted>
