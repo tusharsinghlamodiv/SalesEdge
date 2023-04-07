@@ -1225,39 +1225,7 @@
     <picklistValues>
         <picklist>Segment_Code_Name__c</picklist>
         <values>
-            <fullName>Complimentary</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Corporate Contract Central Account</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Corporate Contract Government</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Corporate Contract Local Account</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Corporate Contract Long Stay</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Corporate Group Business</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Corporate Group Government</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Corporate Group Sport %26 Entertainment</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Corporate Meeting Non Residential</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1265,106 +1233,18 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Corporate Meeting Series</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Crew Airline</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Crew Deutsche Bahn</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Dayuse</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>House Use</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Lay Over</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Leisure Group Ad Hoc</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Leisure Group Private</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Leisure Group Series</fullName>
             <default>false</default>
         </values>
-        <values>
-            <fullName>Leisure Long Stay</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Leisure Packages</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Leisure Tour Operator Hotel  Account</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Leisure Tour Operator Key Account</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Member BAR</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Member Promotion</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Other Discount</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Public BAR</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Public Promotion</fullName>
-            <default>false</default>
-        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Segment_Code__c</picklist>
         <values>
-            <fullName>AHO</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>ARO</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CLS</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>CONVC</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DIMB</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GACY</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GANQ</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1376,79 +1256,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>GAPT</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GASQ</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>GAST</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GASY</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GBCRB</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GGV</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>HNM</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>LLS</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>OCMS</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>ODISC</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>OGV</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>ONG</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>ONM</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>ONP</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>OWL</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>OWS</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>PROMP</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>PROMS</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SMERFS</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1458,71 +1266,15 @@
             <fullName>Group</fullName>
             <default>false</default>
         </values>
-        <values>
-            <fullName>Individual</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Other</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Permanent</fullName>
-            <default>false</default>
-        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Segment_Group__c</picklist>
-        <values>
-            <fullName>BAR</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>COMP</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CONT</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>COR</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CREW</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DSC</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DUS</fullName>
-            <default>false</default>
-        </values>
         <values>
             <fullName>GT</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>LOG</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>MICE</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>PKG</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SMERF</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>WHL</fullName>
             <default>false</default>
         </values>
     </picklistValues>
