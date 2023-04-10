@@ -115,6 +115,10 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Event</controllingFieldValue>
+            <valueName>Family Trip</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event</controllingFieldValue>
             <valueName>Sales Mission</valueName>
         </valueSettings>
         <valueSettings>
