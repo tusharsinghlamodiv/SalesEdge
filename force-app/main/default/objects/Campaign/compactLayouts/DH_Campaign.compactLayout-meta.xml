@@ -6,6 +6,7 @@
     <fields>Status</fields>
     <fields>Purpose__c</fields>
     <fields>Sales_Department__c</fields>
+    <fields>Hotel_Participation__c</fields>
     <fields>OwnerId</fields>
     <label>DH Campaign</label>
 </CompactLayout>
