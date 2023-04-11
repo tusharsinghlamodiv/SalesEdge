@@ -38,6 +38,10 @@
                 <behavior>Edit</behavior>
                 <field>Campaign__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CurrencyIsoCode</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -117,6 +121,14 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>Room_Width_m__c</fields>
+        <fields>Room_Length_m__c</fields>
+        <fields>Size_m2__c</fields>
+        <fields>Banquet__c</fields>
+        <fields>Class_Room_Style__c</fields>
+        <fields>Reception__c</fields>
+        <fields>Rows__c</fields>
+        <fields>uShape__c</fields>
         <relatedList>Hotel_Meeting_Room__c.Hotel__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
