@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Agency</fullName>
+        <default>false</default>
+        <label>Agency</label>
+        <reverseRole>Agency</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Credit Card</fullName>
+        <default>false</default>
+        <label>Credit Card</label>
+        <reverseRole>Credit Card</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Expense Management System</fullName>
+        <default>false</default>
+        <label>Expense Management System</label>
+        <reverseRole>Expense Management System</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Group RFP Tool</fullName>
+        <default>false</default>
+        <label>Group RFP Tool</label>
+        <reverseRole>Group RFP Tool</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Transient Online Booking Tool</fullName>
+        <default>false</default>
+        <label>Transient Online Booking Tool</label>
+        <reverseRole>Transient Online Booking Tool</reverseRole>
+    </standardValue>
+</StandardValueSet>

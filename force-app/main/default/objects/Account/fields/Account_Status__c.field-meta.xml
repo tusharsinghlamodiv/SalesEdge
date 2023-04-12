@@ -3,7 +3,7 @@
     <fullName>Account_Status__c</fullName>
     <externalId>false</externalId>
     <label>Account Status</label>
-    <required>false</required>
+    <required>true</required>
     <trackFeedHistory>true</trackFeedHistory>
     <trackHistory>true</trackHistory>
     <type>Picklist</type>
