@@ -534,6 +534,27 @@
                 <identifier>flexipage_fieldSection3</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong&gt;Supporting Documents:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.my.salesforce.com/servlet/servlet.FileDownload?file=01568000000ymtL&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Pot Check MICE&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.my.salesforce.com/servlet/servlet.FileDownload?file=01568000000ymtG&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Pot Check ROOMS ONLY&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.my.salesforce.com/servlet/servlet.FileDownload?file=01568000000ymtQ&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hotel Facts Sheets&lt;/a&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>MICE</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
         <name>detailTabContent</name>
         <type>Facet</type>
     </flexiPageRegions>
