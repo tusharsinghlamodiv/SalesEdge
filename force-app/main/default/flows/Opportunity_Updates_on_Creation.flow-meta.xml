@@ -2,37 +2,11 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <decisions>
-        <description>If channel code name is populated then the other channel fields may need to be updated.</description>
-        <name>Channel_Code_Name_Populated</name>
-        <label>Channel Code Name Populated?</label>
-        <locationX>182</locationX>
-        <locationY>335</locationY>
-        <defaultConnector>
-            <targetReference>Segment_Code_Name_Populated</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome - No - Segment code name not updated</defaultConnectorLabel>
-        <rules>
-            <name>Yes_Channel_code_name_populated</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Channel_Code_Name__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Populate_Channel_Fields</targetReference>
-            </connector>
-            <label>Yes - Channel code name populated</label>
-        </rules>
-    </decisions>
-    <decisions>
         <description>If segment code name is entered (not null) then the other segment fields may need to be populated.</description>
         <name>Segment_Code_Name_Populated</name>
         <label>Segment Code Name Populated?</label>
         <locationX>182</locationX>
-        <locationY>671</locationY>
+        <locationY>335</locationY>
         <defaultConnectorLabel>No - Segment code name not populated</defaultConnectorLabel>
         <rules>
             <name>Yes_Segment_code_name_populated</name>
@@ -76,7 +50,7 @@
         <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Channel_Code_Name_Populated</targetReference>
+            <targetReference>Segment_Code_Name_Populated</targetReference>
         </connector>
         <object>Opportunity</object>
         <recordTriggerType>Create</recordTriggerType>
@@ -84,34 +58,11 @@
     </start>
     <status>Active</status>
     <subflows>
-        <description>Call sub flow that populates the Channel fields based on the Channel Code Name entered.</description>
-        <name>Populate_Channel_Fields</name>
-        <label>Populate Channel Fields</label>
-        <locationX>50</locationX>
-        <locationY>455</locationY>
-        <connector>
-            <targetReference>Segment_Code_Name_Populated</targetReference>
-        </connector>
-        <flowName>Process_Update_Channel_Related_Fields</flowName>
-        <inputAssignments>
-            <name>var_in_channelValues</name>
-            <value>
-                <elementReference>$Record.Channel_Code_Name__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>var_in_recordIdToUpdate</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-    </subflows>
-    <subflows>
         <description>Call sub flow that populates the Segment fields based on the Segment Code Name entered.</description>
         <name>Populate_Segment_Fields</name>
         <label>Populate Segment Fields</label>
         <locationX>50</locationX>
-        <locationY>791</locationY>
+        <locationY>455</locationY>
         <flowName>Process_Update_Segment_Related_Fields</flowName>
         <inputAssignments>
             <name>var_in_segmentValues</name>

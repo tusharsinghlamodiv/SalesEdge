@@ -334,28 +334,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Segment_Code__c</fieldItem>
-                <identifier>RecordSegment_Code_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.Segment_Group__c</fieldItem>
                 <identifier>RecordSegment_Group_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Segment_Group_Indicator__c</fieldItem>
-                <identifier>RecordSegment_Group_Indicator_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-6ad91a3f-72ea-4e2a-bc1f-1ff74b65a3a7</name>
@@ -408,8 +388,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Channel_Code_Name__c</fieldItem>
-                <identifier>RecordChannel_Code_Name_cField</identifier>
+                <fieldItem>Record.Segment_Code__c</fieldItem>
+                <identifier>RecordSegment_Code_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -418,28 +398,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Channel_Code__c</fieldItem>
-                <identifier>RecordChannel_Code_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Channel_Group__c</fieldItem>
-                <identifier>RecordChannel_Group_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Channel_Global_Indicator__c</fieldItem>
-                <identifier>RecordChannel_Global_Indicator_cField</identifier>
+                <fieldItem>Record.Segment_Group_Indicator__c</fieldItem>
+                <identifier>RecordSegment_Group_Indicator_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-35f474ac-60ac-4ca8-a851-9ea953299642</name>
