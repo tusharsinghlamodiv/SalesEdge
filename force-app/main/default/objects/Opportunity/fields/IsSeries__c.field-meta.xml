@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsSeries__c</fullName>
+    <description>Denotes if an Opportunity is part of a series and allows identification of type of series if applicable (either Leisure Series or Event Series).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select if this Opportunity is part of a Leisure Series or Event Series.</inlineHelpText>
+    <label>Is Series?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No</fullName>
+                <default>true</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Leisure Series</fullName>
+                <default>false</default>
+                <label>Leisure Series</label>
+            </value>
+            <value>
+                <fullName>Event Series</fullName>
+                <default>false</default>
+                <label>Event Series</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
