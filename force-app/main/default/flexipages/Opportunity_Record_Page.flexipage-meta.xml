@@ -152,6 +152,16 @@
                 <identifier>RecordSector_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.CurrencyIsoCode</fieldItem>
+                <identifier>RecordCurrencyIsoCodeField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-8ba04f9c-9b1e-4b5c-a00b-113c4c3d25ec</name>
         <type>Facet</type>
     </flexiPageRegions>
