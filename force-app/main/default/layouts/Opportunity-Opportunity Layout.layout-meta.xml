@@ -119,6 +119,10 @@
                 <behavior>Edit</behavior>
                 <field>IsSeries__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Status_Date__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
