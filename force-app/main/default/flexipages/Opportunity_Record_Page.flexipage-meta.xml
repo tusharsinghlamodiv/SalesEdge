@@ -200,6 +200,16 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Status_Date__c</fieldItem>
+                <identifier>RecordStatus_Date_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.StageName</fieldItem>
@@ -324,16 +334,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Final_Amount_EUR__c</fieldItem>
-                <identifier>RecordFinal_Amount_EUR_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.Segment_Code_Name__c</fieldItem>
                 <identifier>RecordSegment_Code_Name_cField</identifier>
             </fieldInstance>
@@ -380,16 +380,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Room_Nights__c</fieldItem>
                 <identifier>RecordRoom_Nights_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Potential_Amount_EUR__c</fieldItem>
-                <identifier>RecordPotential_Amount_EUR_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -552,7 +542,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>richTextValue</name>
-                    <value>&lt;p&gt;&lt;strong&gt;Supporting Documents:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.my.salesforce.com/0696800000P9gkz&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Pot Check MICE&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.my.salesforce.com/0696800000P9gky&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Pot Check ROOMS ONLY&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.my.salesforce.com/07H68000000c12GEAQ&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hotel Facts Sheets&lt;/a&gt;&lt;/p&gt;</value>
+                    <value>&lt;p&gt;&lt;strong&gt;Supporting Documents:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.lightning.force.com/0696800000P9gkz&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Pot Check MICE&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.lightning.force.com/0696800000P9gky&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Pot Check ROOMS ONLY&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.lightning.force.com/lightning/o/ContentDocument/home&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hotel Fact Sheets&lt;/a&gt; (Files &amp;gt; Libraries &amp;gt; Opportunity Supporting Documents - MICE &amp;gt; Hotel Fact Sheets)&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
                 <identifier>flexipage_richText</identifier>
