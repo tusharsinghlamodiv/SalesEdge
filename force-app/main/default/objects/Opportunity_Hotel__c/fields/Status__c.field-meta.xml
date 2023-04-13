@@ -12,9 +12,14 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>UNC</fullName>
+                <fullName>CHECK</fullName>
                 <default>false</default>
-                <label>UNC</label>
+                <label>CHECK</label>
+            </value>
+            <value>
+                <fullName>POT</fullName>
+                <default>false</default>
+                <label>POT</label>
             </value>
             <value>
                 <fullName>OPT</fullName>
@@ -35,6 +40,11 @@
                 <fullName>LOS</fullName>
                 <default>false</default>
                 <label>LOS</label>
+            </value>
+            <value>
+                <fullName>UNC</fullName>
+                <default>false</default>
+                <label>UNC</label>
             </value>
         </valueSetDefinition>
     </valueSet>

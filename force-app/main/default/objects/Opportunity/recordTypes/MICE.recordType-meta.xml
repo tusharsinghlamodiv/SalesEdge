@@ -3,7 +3,7 @@
     <fullName>MICE</fullName>
     <active>true</active>
     <businessProcess>DH</businessProcess>
-    <label>MICE</label>
+    <label>Groups &amp; MICE</label>
     <picklistValues>
         <picklist>Channel_Code_Name__c</picklist>
         <values>
@@ -835,6 +835,21 @@
         <values>
             <fullName>Wholesale and retail trade%3B repair of motor vehicles and motorcycles</fullName>
             <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IsSeries__c</picklist>
+        <values>
+            <fullName>Event Series</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leisure Series</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
         </values>
     </picklistValues>
     <picklistValues>
