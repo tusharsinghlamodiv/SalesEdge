@@ -6,7 +6,7 @@
         <name>Segment_Code_Name_Populated</name>
         <label>Segment Code Name Populated?</label>
         <locationX>182</locationX>
-        <locationY>335</locationY>
+        <locationY>455</locationY>
         <defaultConnectorLabel>No - Segment code name not populated</defaultConnectorLabel>
         <rules>
             <name>Yes_Segment_code_name_populated</name>
@@ -46,11 +46,39 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Oppty_Fields</name>
+        <label>Update Oppty Fields</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <connector>
+            <targetReference>Segment_Code_Name_Populated</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Industry__c</field>
+            <value>
+                <elementReference>$Record.Account.Industry__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Sector__c</field>
+            <value>
+                <elementReference>$Record.Account.Sector__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status_Date__c</field>
+            <value>
+                <elementReference>$Record.CloseDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
         <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Segment_Code_Name_Populated</targetReference>
+            <targetReference>Update_Oppty_Fields</targetReference>
         </connector>
         <object>Opportunity</object>
         <recordTriggerType>Create</recordTriggerType>
@@ -62,7 +90,7 @@
         <name>Populate_Segment_Fields</name>
         <label>Populate Segment Fields</label>
         <locationX>50</locationX>
-        <locationY>455</locationY>
+        <locationY>575</locationY>
         <flowName>Process_Update_Segment_Related_Fields</flowName>
         <inputAssignments>
             <name>var_in_segmentValues</name>
