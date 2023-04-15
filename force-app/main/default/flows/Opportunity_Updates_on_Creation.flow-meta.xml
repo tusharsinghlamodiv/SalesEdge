@@ -66,12 +66,6 @@
                 <elementReference>$Record.Account.Sector__c</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <field>Status_Date__c</field>
-            <value>
-                <elementReference>$Record.CloseDate</elementReference>
-            </value>
-        </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
