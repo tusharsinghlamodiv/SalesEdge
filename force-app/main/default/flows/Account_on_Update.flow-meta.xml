@@ -6,7 +6,7 @@
         <name>Channel_Code_Name_Updated</name>
         <label>Channel Code Name Updated?</label>
         <locationX>182</locationX>
-        <locationY>455</locationY>
+        <locationY>671</locationY>
         <defaultConnector>
             <targetReference>Segment_Code_Name_Updated</targetReference>
         </defaultConnector>
@@ -32,7 +32,7 @@
         <name>Segment_Code_Name_Updated</name>
         <label>Segment Code Name Updated?</label>
         <locationX>182</locationX>
-        <locationY>791</locationY>
+        <locationY>1007</locationY>
         <defaultConnectorLabel>Default Outcome - No - Segment Code Name Not Updated</defaultConnectorLabel>
         <rules>
             <name>Yes_Segment_Code_Name_Updated</name>
@@ -50,12 +50,32 @@
             <label>Yes - Segment Code Name Updated</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>System_Connectivity_Status_is_Roll_Out</name>
+        <label>System Connectivity Status is Roll Out?</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Channel_Code_Name_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome - No - Other Value</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Roll_Out</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.System_Connectivity_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Roll-Out</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Task_to_add_Batch_Plan_excel_file</targetReference>
+            </connector>
+            <label>Yes - Roll Out</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
-    <formulas>
-        <name>AppendDHConnectLink</name>
-        <dataType>String</dataType>
-        <expression>{!$Record.T_C_DH_Connect_Link__c} + SUBSTITUTE({!$Record.Name},&apos; &apos;, &apos;+&apos;)</expression>
-    </formulas>
     <interviewLabel>Account on Update {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Account on Update</label>
     <processMetadataValues>
@@ -77,27 +97,11 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
-    <recordUpdates>
-        <name>Update_DH_Connect_Link</name>
-        <label>Update DH Connect Link</label>
-        <locationX>182</locationX>
-        <locationY>335</locationY>
-        <connector>
-            <targetReference>Channel_Code_Name_Updated</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>T_C_DH_Connect_Link__c</field>
-            <value>
-                <elementReference>AppendDHConnectLink</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
     <start>
         <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_DH_Connect_Link</targetReference>
+            <targetReference>System_Connectivity_Status_is_Roll_Out</targetReference>
         </connector>
         <object>Account</object>
         <recordTriggerType>Update</recordTriggerType>
@@ -109,7 +113,7 @@
         <name>Populate_Channel_Fields</name>
         <label>Populate Channel Fields</label>
         <locationX>50</locationX>
-        <locationY>575</locationY>
+        <locationY>791</locationY>
         <connector>
             <targetReference>Segment_Code_Name_Updated</targetReference>
         </connector>
@@ -128,11 +132,27 @@
         </inputAssignments>
     </subflows>
     <subflows>
+        <name>Task_to_add_Batch_Plan_excel_file</name>
+        <label>Task to add Batch Plan excel file</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <connector>
+            <targetReference>Channel_Code_Name_Updated</targetReference>
+        </connector>
+        <flowName>Process_Create_Task_Account_System_Connectivity_Status_Roll_Out</flowName>
+        <inputAssignments>
+            <name>var_in_AccountId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
         <description>Call sub flow that updates the Segment fields based on the Segment Code Name entered.</description>
         <name>Update_Segment_Fields</name>
         <label>Update Segment Fields</label>
         <locationX>50</locationX>
-        <locationY>911</locationY>
+        <locationY>1127</locationY>
         <flowName>Process_Update_Segment_Related_Fields</flowName>
         <inputAssignments>
             <name>var_in_segmentValues</name>
