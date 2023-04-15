@@ -5,7 +5,7 @@
         <name>Hotel_Status_Changed</name>
         <label>Hotel Status Changed?</label>
         <locationX>182</locationX>
-        <locationY>791</locationY>
+        <locationY>1127</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Hotel_Status_DEF</name>
@@ -24,10 +24,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Is_new_record</name>
+        <label>Is new record?</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>What_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome - Not a New Record</defaultConnectorLabel>
+        <rules>
+            <name>Yes_New_Record</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>var_for_IsNewRecord</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity_Hotel_Record</targetReference>
+            </connector>
+            <label>Yes - New Record</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>What_Changed</name>
         <label>What Changed?</label>
         <locationX>182</locationX>
-        <locationY>335</locationY>
+        <locationY>671</locationY>
         <defaultConnector>
             <targetReference>Hotel_Status_Changed</targetReference>
         </defaultConnector>
@@ -56,6 +81,11 @@
         </rules>
     </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>var_for_IsNewRecord</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
     <interviewLabel>Opportunity Hotel Create Update {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Opportunity Hotel Create Update</label>
     <processMetadataValues>
@@ -78,10 +108,26 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordUpdates>
+        <name>Update_Opportunity_Hotel_Record</name>
+        <label>Update Opportunity Hotel Record</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <connector>
+            <targetReference>What_Changed</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Status_Date__c</field>
+            <value>
+                <elementReference>$Record.Opportunity__r.CloseDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update_Oppty_Amount</name>
         <label>Update Oppty Amount</label>
         <locationX>50</locationX>
-        <locationY>575</locationY>
+        <locationY>911</locationY>
         <connector>
             <targetReference>Hotel_Status_Changed</targetReference>
         </connector>
@@ -105,7 +151,7 @@
         <name>Update_Other_Opportunity_Hotel_Records</name>
         <label>Update Primary on Other Opportunity Hotel Records</label>
         <locationX>50</locationX>
-        <locationY>455</locationY>
+        <locationY>791</locationY>
         <connector>
             <targetReference>Update_Oppty_Amount</targetReference>
         </connector>
@@ -136,7 +182,7 @@
         <name>Update_Other_Opportunity_Hotel_Records_to_LOS</name>
         <label>Update Other Opportunity Hotel Records to LOS</label>
         <locationX>50</locationX>
-        <locationY>911</locationY>
+        <locationY>1247</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Opportunity__c</field>
@@ -176,7 +222,7 @@
         <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>What_Changed</targetReference>
+            <targetReference>Is_new_record</targetReference>
         </connector>
         <object>Opportunity_Hotel__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
