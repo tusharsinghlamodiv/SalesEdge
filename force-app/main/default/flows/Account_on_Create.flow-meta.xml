@@ -6,7 +6,7 @@
         <name>Channel_Code_Name_Populated</name>
         <label>Channel Code Name Populated?</label>
         <locationX>182</locationX>
-        <locationY>455</locationY>
+        <locationY>1007</locationY>
         <defaultConnector>
             <targetReference>Segment_Code_Name_Populated</targetReference>
         </defaultConnector>
@@ -28,11 +28,36 @@
         </rules>
     </decisions>
     <decisions>
+        <name>dec_System_Connectivity_Status_is_Roll_Out</name>
+        <label>System Connectivity Status is Roll Out?</label>
+        <locationX>182</locationX>
+        <locationY>671</locationY>
+        <defaultConnector>
+            <targetReference>Channel_Code_Name_Populated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome - No - Other Value</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Roll_Out</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.System_Connectivity_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Roll-Out</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Task_to_add_Batch_Plan_excel_file</targetReference>
+            </connector>
+            <label>Yes - Roll Out</label>
+        </rules>
+    </decisions>
+    <decisions>
         <description>If segment code name is entered (not null) then the other segment fields may need to be populated.</description>
         <name>Segment_Code_Name_Populated</name>
         <label>Segment Code Name Populated?</label>
         <locationX>182</locationX>
-        <locationY>791</locationY>
+        <locationY>1343</locationY>
         <defaultConnectorLabel>Default Outcome - No - Segment code name NOT populated</defaultConnectorLabel>
         <rules>
             <name>Yes_Segment_code_name_populated</name>
@@ -50,11 +75,41 @@
             <label>Yes - Segment code name populated</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>T_C_DH_Connect_Link_Blank</name>
+        <label>T&amp;C DH Connect Link Blank?</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>dec_System_Connectivity_Status_is_Roll_Out</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome - Value already exist</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Value_does_not_exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.T_C_DH_Connect_Link__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_DH_Connect_Link</targetReference>
+            </connector>
+            <label>Yes - Value does not exist</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <formulas>
         <name>AppendDHConnectLink</name>
         <dataType>String</dataType>
-        <expression>{!$Record.T_C_DH_Connect_Link__c} + SUBSTITUTE({!$Record.Name},&apos; &apos;, &apos;+&apos;)</expression>
+        <expression>&apos;https://connect.deutschehospitality.com/display/dhgroupsalesworkspace/&apos; + SUBSTITUTE({!$Record.Name},&apos; &apos;, &apos;+&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>var_for_TodaysDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
     </formulas>
     <interviewLabel>Account on Create {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Account on Create</label>
@@ -80,10 +135,10 @@
     <recordUpdates>
         <name>Update_DH_Connect_Link</name>
         <label>Update DH Connect Link</label>
-        <locationX>182</locationX>
-        <locationY>335</locationY>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
         <connector>
-            <targetReference>Channel_Code_Name_Populated</targetReference>
+            <targetReference>dec_System_Connectivity_Status_is_Roll_Out</targetReference>
         </connector>
         <inputAssignments>
             <field>T_C_DH_Connect_Link__c</field>
@@ -97,7 +152,7 @@
         <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_DH_Connect_Link</targetReference>
+            <targetReference>T_C_DH_Connect_Link_Blank</targetReference>
         </connector>
         <object>Account</object>
         <recordTriggerType>Create</recordTriggerType>
@@ -109,7 +164,7 @@
         <name>Populate_Channel_Fields</name>
         <label>Populate Channel Fields</label>
         <locationX>50</locationX>
-        <locationY>575</locationY>
+        <locationY>1127</locationY>
         <connector>
             <targetReference>Segment_Code_Name_Populated</targetReference>
         </connector>
@@ -132,7 +187,7 @@
         <name>Populate_Segment_Fields</name>
         <label>Populate Segment Fields</label>
         <locationX>50</locationX>
-        <locationY>911</locationY>
+        <locationY>1463</locationY>
         <flowName>Process_Update_Segment_Related_Fields</flowName>
         <inputAssignments>
             <name>var_in_segmentValues</name>
@@ -142,6 +197,22 @@
         </inputAssignments>
         <inputAssignments>
             <name>var_recordIdToUpdate</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Task_to_add_Batch_Plan_excel_file</name>
+        <label>Task to add Batch Plan excel file</label>
+        <locationX>50</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>Channel_Code_Name_Populated</targetReference>
+        </connector>
+        <flowName>Process_Create_Task_Account_System_Connectivity_Status_Roll_Out</flowName>
+        <inputAssignments>
+            <name>var_in_AccountId</name>
             <value>
                 <elementReference>$Record.Id</elementReference>
             </value>
