@@ -5,14 +5,18 @@
     <description>Validate proper formatting on Mobile number.</description>
     <errorConditionFormula>IF(
 ISBLANK( MobilePhone ),false,
-NOT(
 OR(
-REGEX( MobilePhone , &quot;[+][0-9]{1} [0-9]{3} [0-9]{7}&quot;),
-REGEX( MobilePhone , &quot;[+][0-9]{2} [0-9]{3} [0-9]{7}&quot;),
-REGEX( MobilePhone , &quot;[+][0-9]{3} [0-9]{3} [0-9]{7}&quot;)
-)
+NOT(CONTAINS(Phone,&quot;+&quot;)),
+FIND(&quot;+&quot;,MobilePhone ) != 1,
+CONTAINS(MobilePhone , &quot;(&quot;),
+CONTAINS(MobilePhone , &quot;)&quot;),
+CONTAINS(MobilePhone , &quot; &quot;),
+CONTAINS(MobilePhone , &quot;-&quot;),
+CONTAINS(MobilePhone , &quot;&amp;&quot;),
+CONTAINS(MobilePhone , &quot;#&quot;),
+CONTAINS(MobilePhone , &quot;*&quot;)
 )
 )</errorConditionFormula>
     <errorDisplayField>MobilePhone</errorDisplayField>
-    <errorMessage>Please enter mobile in &quot;+XX XXX XXXXXXX&quot; format (Ex: +49 123 1234567).</errorMessage>
+    <errorMessage>Please enter mobile in format &quot;+XXXXXXXXXXX&quot; (Ex: +4912341234567).</errorMessage>
 </ValidationRule>
