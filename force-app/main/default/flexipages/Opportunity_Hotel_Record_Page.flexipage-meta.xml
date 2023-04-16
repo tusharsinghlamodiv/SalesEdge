@@ -92,6 +92,16 @@
                 <identifier>RecordPrimary_Hotel_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Option_Date__c</fieldItem>
+                <identifier>RecordOption_Date_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-00e51434-b667-4b3f-bd27-d6b15340c791</name>
         <type>Facet</type>
     </flexiPageRegions>
