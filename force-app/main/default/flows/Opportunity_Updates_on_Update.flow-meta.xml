@@ -4,7 +4,7 @@
         <name>Update_Account_on_Stage_Change</name>
         <label>Update Account on Stage Change</label>
         <locationX>446</locationX>
-        <locationY>791</locationY>
+        <locationY>1127</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
@@ -26,11 +26,69 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Assign_Deadline_Proposal_Date</name>
+        <label>Assign Deadline Proposal Date</label>
+        <locationX>644</locationX>
+        <locationY>791</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Date_of_Enquiry_Reception__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_for_enquirySentPlus1Day</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_the_Opportunity_Stage_Changed</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Deadline_Proposal_Field_Needs_Update</name>
+        <label>Deadline Proposal Field Needs Update?</label>
+        <locationX>776</locationX>
+        <locationY>671</locationY>
+        <defaultConnector>
+            <targetReference>Is_the_Opportunity_Stage_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Update_Deadline_Proposal</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Date_of_Enquiry_Reception__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Date_of_Enquiry_Reception__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Deadline_Proposal__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Deadline_Proposal_Date</targetReference>
+            </connector>
+            <label>Yes - Update Deadline Proposal</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Is_the_Opportunity_Stage_Changed</name>
         <label>Is the Opportunity Stage Changed?</label>
         <locationX>776</locationX>
-        <locationY>671</locationY>
+        <locationY>1007</locationY>
+        <defaultConnector>
+            <targetReference>Update_Opportunity_Record</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome - No - Opportunity Stage NOT Changed</defaultConnectorLabel>
         <rules>
             <name>Yes_Opportunity_Stage_Changed</name>
@@ -54,7 +112,7 @@
         <locationX>776</locationX>
         <locationY>335</locationY>
         <defaultConnector>
-            <targetReference>Is_the_Opportunity_Stage_Changed</targetReference>
+            <targetReference>Deadline_Proposal_Field_Needs_Update</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome - No - Segment Code Name Not Updated</defaultConnectorLabel>
         <rules>
@@ -77,7 +135,7 @@
         <name>Stage</name>
         <label>Stage?</label>
         <locationX>446</locationX>
-        <locationY>911</locationY>
+        <locationY>1247</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Closed_Lost</name>
@@ -131,6 +189,11 @@
         <dataType>String</dataType>
         <expression>{!$Record.Name} + &apos; stage changed from &apos; + TEXT({!$Record__Prior.StageName}) + &apos; to &apos; +  TEXT({!$Record.StageName})</expression>
     </formulas>
+    <formulas>
+        <name>var_for_enquirySentPlus1Day</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.Date_of_Enquiry_Reception__c}+1</expression>
+    </formulas>
     <interviewLabel>Opportunity Updates on Update {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Opportunity Updates on Update</label>
     <processMetadataValues>
@@ -156,7 +219,10 @@
         <name>Update_Opportunity_Hotel_Record_to_DEF</name>
         <label>Update Opportunity Hotel Record to DEF</label>
         <locationX>578</locationX>
-        <locationY>1031</locationY>
+        <locationY>1367</locationY>
+        <connector>
+            <targetReference>Update_Opportunity_Record</targetReference>
+        </connector>
         <filterLogic>or</filterLogic>
         <filters>
             <field>Status__c</field>
@@ -181,10 +247,20 @@
         <inputReference>$Record.Opportunity_Hotels__r</inputReference>
     </recordUpdates>
     <recordUpdates>
+        <name>Update_Opportunity_Record</name>
+        <label>Update Opportunity Record</label>
+        <locationX>776</locationX>
+        <locationY>1679</locationY>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update_Oppty_Hotel_Records_to_LOS</name>
         <label>Update Oppty Hotel Records to LOS</label>
         <locationX>50</locationX>
-        <locationY>1031</locationY>
+        <locationY>1367</locationY>
+        <connector>
+            <targetReference>Update_Opportunity_Record</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Opportunity__c</field>
@@ -217,7 +293,10 @@
         <name>Update_Oppty_Hotel_Records_to_UNC</name>
         <label>Update Oppty Hotel Records to UNC</label>
         <locationX>314</locationX>
-        <locationY>1031</locationY>
+        <locationY>1367</locationY>
+        <connector>
+            <targetReference>Update_Opportunity_Record</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Opportunity__c</field>
@@ -279,7 +358,7 @@
         <locationX>644</locationX>
         <locationY>455</locationY>
         <connector>
-            <targetReference>Is_the_Opportunity_Stage_Changed</targetReference>
+            <targetReference>Deadline_Proposal_Field_Needs_Update</targetReference>
         </connector>
         <flowName>Process_Update_Segment_Related_Fields</flowName>
         <inputAssignments>
