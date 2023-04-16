@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <label>Event Start Date</label>
     <required>true</required>
-    <trackFeedHistory>false</trackFeedHistory>
+    <trackFeedHistory>true</trackFeedHistory>
     <trackTrending>false</trackTrending>
     <type>Date</type>
 </CustomField>
