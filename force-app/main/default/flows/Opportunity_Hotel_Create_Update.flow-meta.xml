@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Chatter_Post_to_Oppty_Primary_Hotel</name>
+        <label>Chatter Post to Oppty - Primary Hotel</label>
+        <locationX>50</locationX>
+        <locationY>911</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Oppty_Amount</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>var_for_chatterPostMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>$Record.Opportunity__c</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
     <apiVersion>57.0</apiVersion>
     <decisions>
         <name>Hotel_Status_Changed</name>
         <label>Hotel Status Changed?</label>
-        <locationX>182</locationX>
-        <locationY>1127</locationY>
+        <locationX>314</locationX>
+        <locationY>1247</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Hotel_Status_DEF</name>
@@ -26,7 +51,7 @@
     <decisions>
         <name>Is_new_record</name>
         <label>Is new record?</label>
-        <locationX>182</locationX>
+        <locationX>314</locationX>
         <locationY>335</locationY>
         <defaultConnector>
             <targetReference>What_Changed</targetReference>
@@ -51,15 +76,44 @@
     <decisions>
         <name>What_Changed</name>
         <label>What Changed?</label>
-        <locationX>182</locationX>
+        <locationX>314</locationX>
         <locationY>671</locationY>
         <defaultConnector>
             <targetReference>Hotel_Status_Changed</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>Primary_or_Sub_Amount_Changed</name>
-            <conditionLogic>or</conditionLogic>
+            <name>Primary_Hotel_Created_or_Changed</name>
+            <conditionLogic>(1 AND 2)  OR (1 AND 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Primary_Hotel__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Primary_Hotel__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>var_for_IsNewRecord</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Other_Opportunity_Hotel_Records</targetReference>
+            </connector>
+            <label>Primary Hotel Created or Changed</label>
+        </rules>
+        <rules>
+            <name>Sub_Amount_Changed_on_Primary_Hotel</name>
+            <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Primary_Hotel__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -75,12 +129,18 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Other_Opportunity_Hotel_Records</targetReference>
+                <isGoTo>true</isGoTo>
+                <targetReference>Update_Oppty_Amount</targetReference>
             </connector>
-            <label>Primary or Sub Amount Changed?</label>
+            <label>Sub Amount Changed on Primary Hotel</label>
         </rules>
     </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>var_for_chatterPostMessage</name>
+        <dataType>String</dataType>
+        <expression>&apos;Primary Hotel for this opportunity is &apos; + {!$Record.Hotel__r.Name}</expression>
+    </formulas>
     <formulas>
         <name>var_for_IsNewRecord</name>
         <dataType>Boolean</dataType>
@@ -110,7 +170,7 @@
     <recordUpdates>
         <name>Update_Opportunity_Hotel_Record</name>
         <label>Update Opportunity Hotel Record</label>
-        <locationX>50</locationX>
+        <locationX>182</locationX>
         <locationY>455</locationY>
         <connector>
             <targetReference>What_Changed</targetReference>
@@ -127,7 +187,7 @@
         <name>Update_Oppty_Amount</name>
         <label>Update Oppty Amount</label>
         <locationX>50</locationX>
-        <locationY>911</locationY>
+        <locationY>1031</locationY>
         <connector>
             <targetReference>Hotel_Status_Changed</targetReference>
         </connector>
@@ -136,7 +196,7 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.Opportunity__c</elementReference>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
             </value>
         </filters>
         <inputAssignments>
@@ -153,7 +213,7 @@
         <locationX>50</locationX>
         <locationY>791</locationY>
         <connector>
-            <targetReference>Update_Oppty_Amount</targetReference>
+            <targetReference>Chatter_Post_to_Oppty_Primary_Hotel</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -181,8 +241,8 @@
     <recordUpdates>
         <name>Update_Other_Opportunity_Hotel_Records_to_LOS</name>
         <label>Update Other Opportunity Hotel Records to LOS</label>
-        <locationX>50</locationX>
-        <locationY>1247</locationY>
+        <locationX>182</locationX>
+        <locationY>1367</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Opportunity__c</field>
@@ -219,7 +279,7 @@
         <object>Opportunity_Hotel__c</object>
     </recordUpdates>
     <start>
-        <locationX>56</locationX>
+        <locationX>188</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Is_new_record</targetReference>
@@ -229,4 +289,12 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <variables>
+        <name>var_subAmountValue</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
 </Flow>
