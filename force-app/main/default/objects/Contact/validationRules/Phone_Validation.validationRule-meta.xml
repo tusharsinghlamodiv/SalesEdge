@@ -4,14 +4,18 @@
     <active>true</active>
     <errorConditionFormula>IF(
 ISBLANK(Phone),false,
-NOT(
 OR(
-REGEX( Phone , &quot;[+][0-9]{1} [0-9]{3} [0-9]{7}&quot;),
-REGEX( Phone , &quot;[+][0-9]{2} [0-9]{3} [0-9]{7}&quot;),
-REGEX( Phone , &quot;[+][0-9]{3} [0-9]{3} [0-9]{7}&quot;)
-)
+NOT(CONTAINS(Phone,&quot;+&quot;)),
+FIND(&quot;+&quot;,Phone) != 1,
+CONTAINS(Phone, &quot;(&quot;),
+CONTAINS(Phone, &quot;)&quot;),
+CONTAINS(Phone, &quot; &quot;),
+CONTAINS(Phone, &quot;-&quot;),
+CONTAINS(Phone, &quot;&amp;&quot;),
+CONTAINS(Phone, &quot;#&quot;),
+CONTAINS(Phone, &quot;*&quot;)
 )
 )</errorConditionFormula>
     <errorDisplayField>Phone</errorDisplayField>
-    <errorMessage>Please enter phone in &quot;+XX XXX XXXXXXX&quot; format (Ex: +49 123 1234567).</errorMessage>
+    <errorMessage>Please enter phone in format &quot;+XXXXXXXXXXX&quot; (Ex: +4912341234567).</errorMessage>
 </ValidationRule>
