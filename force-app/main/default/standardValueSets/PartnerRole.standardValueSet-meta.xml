@@ -31,4 +31,16 @@
         <label>Transient Online Booking Tool</label>
         <reverseRole>Transient Online Booking Tool</reverseRole>
     </standardValue>
+    <standardValue>
+        <fullName>Travel Management Company (TMC)</fullName>
+        <default>false</default>
+        <label>Travel Management Company (TMC)</label>
+        <reverseRole>Travel Management Company (TMC)</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Consortia</fullName>
+        <default>false</default>
+        <label>Consortia</label>
+        <reverseRole>Consortia</reverseRole>
+    </standardValue>
 </StandardValueSet>
