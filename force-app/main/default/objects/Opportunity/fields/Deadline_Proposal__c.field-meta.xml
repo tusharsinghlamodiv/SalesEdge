@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>T_C_DH_Connect_Link__c</fullName>
+    <fullName>Deadline_Proposal__c</fullName>
     <externalId>false</externalId>
-    <label>T&amp;C DH Connect Link</label>
+    <label>Deadline Proposal</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>false</trackHistory>
-    <type>Url</type>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
 </CustomField>

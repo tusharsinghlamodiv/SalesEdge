@@ -1,12 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Assign_Deadline_Proposal_Date</name>
+        <label>Assign Deadline Proposal Date</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Deadline_Proposal__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_for_enquirySentPlus1Day</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Industry_or_Sector_Needs_Update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Industry_and_Sector_Values</name>
+        <label>Assign Industry and Sector Values</label>
+        <locationX>50</locationX>
+        <locationY>791</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Industry__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Industry__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Sector__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Sector__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Oppty_Fields</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Deadline_Proposal_Needs_Update</name>
+        <label>Deadline Proposal Needs Update?</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Industry_or_Sector_Needs_Update</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome - Update Not needed</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Update_Deadline_Proposal</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Date_of_Enquiry_Reception__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Deadline_Proposal__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Deadline_Proposal_Date</targetReference>
+            </connector>
+            <label>Yes - Update Deadline Proposal</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Industry_or_Sector_Needs_Update</name>
+        <label>Industry or Sector Needs Update?</label>
+        <locationX>182</locationX>
+        <locationY>671</locationY>
+        <defaultConnector>
+            <targetReference>Update_Oppty_Fields</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Update_Needed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Industry__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Sector__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Industry_and_Sector_Values</targetReference>
+            </connector>
+            <label>Yes - Update Needed</label>
+        </rules>
+    </decisions>
     <decisions>
         <description>If segment code name is entered (not null) then the other segment fields may need to be populated.</description>
         <name>Segment_Code_Name_Populated</name>
         <label>Segment Code Name Populated?</label>
         <locationX>182</locationX>
-        <locationY>455</locationY>
+        <locationY>1127</locationY>
         <defaultConnectorLabel>No - Segment code name not populated</defaultConnectorLabel>
         <rules>
             <name>Yes_Segment_code_name_populated</name>
@@ -25,6 +128,11 @@
         </rules>
     </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>var_for_enquirySentPlus1Day</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.Date_of_Enquiry_Reception__c}+1</expression>
+    </formulas>
     <interviewLabel>Opportunity Updates on Creation {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Opportunity Updates on Creation</label>
     <processMetadataValues>
@@ -50,29 +158,17 @@
         <name>Update_Oppty_Fields</name>
         <label>Update Oppty Fields</label>
         <locationX>182</locationX>
-        <locationY>335</locationY>
+        <locationY>1007</locationY>
         <connector>
             <targetReference>Segment_Code_Name_Populated</targetReference>
         </connector>
-        <inputAssignments>
-            <field>Industry__c</field>
-            <value>
-                <elementReference>$Record.Account.Industry__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Sector__c</field>
-            <value>
-                <elementReference>$Record.Account.Sector__c</elementReference>
-            </value>
-        </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
         <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_Oppty_Fields</targetReference>
+            <targetReference>Deadline_Proposal_Needs_Update</targetReference>
         </connector>
         <object>Opportunity</object>
         <recordTriggerType>Create</recordTriggerType>
@@ -84,7 +180,7 @@
         <name>Populate_Segment_Fields</name>
         <label>Populate Segment Fields</label>
         <locationX>50</locationX>
-        <locationY>575</locationY>
+        <locationY>1247</locationY>
         <flowName>Process_Update_Segment_Related_Fields</flowName>
         <inputAssignments>
             <name>var_in_segmentValues</name>
