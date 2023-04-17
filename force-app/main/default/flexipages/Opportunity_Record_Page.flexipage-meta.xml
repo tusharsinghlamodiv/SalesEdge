@@ -290,6 +290,16 @@
                 <identifier>RecordAmountField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.IsSeries__c</fieldItem>
+                <identifier>RecordIsSeries_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-76c81d4b-ae3b-460d-8079-e3b81809ba4d</name>
         <type>Facet</type>
     </flexiPageRegions>
