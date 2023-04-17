@@ -15,6 +15,10 @@
         <default>false</default>
     </values>
     <values>
+        <fullName>Denied</fullName>
+        <default>false</default>
+    </values>
+    <values>
         <fullName>Meeting Scheduled</fullName>
         <default>false</default>
     </values>
