@@ -108,8 +108,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.End_Client__c</fieldItem>
-                <identifier>RecordEnd_Client_cField</identifier>
+                <fieldItem>Record.End_Client_Account__c</fieldItem>
+                <identifier>RecordEnd_Client_Account_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -130,6 +130,26 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Event_End_Date__c</fieldItem>
                 <identifier>RecordEvent_End_Date_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Room_Nights_Attendees__c</fieldItem>
+                <identifier>RecordRoom_Nights_Attendees_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Attendees__c</fieldItem>
+                <identifier>RecordAttendees_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
