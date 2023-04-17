@@ -4,7 +4,7 @@
         <name>Update_Account_on_Stage_Change</name>
         <label>Update Account on Stage Change</label>
         <locationX>446</locationX>
-        <locationY>1127</locationY>
+        <locationY>1463</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
@@ -39,6 +39,22 @@
             </value>
         </assignmentItems>
         <connector>
+            <targetReference>Room_Nights_Attendees_Need_Update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Room_Nights_Attendees_Value</name>
+        <label>Assign Room Nights/# Attendees Value</label>
+        <locationX>644</locationX>
+        <locationY>1127</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Room_Nights_Attendees__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_for_calculatedRoomNightAttendees</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
             <targetReference>Is_the_Opportunity_Stage_Changed</targetReference>
         </connector>
     </assignments>
@@ -48,7 +64,7 @@
         <locationX>776</locationX>
         <locationY>671</locationY>
         <defaultConnector>
-            <targetReference>Is_the_Opportunity_Stage_Changed</targetReference>
+            <targetReference>Room_Nights_Attendees_Need_Update</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -85,7 +101,7 @@
         <name>Is_the_Opportunity_Stage_Changed</name>
         <label>Is the Opportunity Stage Changed?</label>
         <locationX>776</locationX>
-        <locationY>1007</locationY>
+        <locationY>1343</locationY>
         <defaultConnector>
             <targetReference>Update_Opportunity_Record</targetReference>
         </defaultConnector>
@@ -104,6 +120,66 @@
                 <targetReference>Update_Account_on_Stage_Change</targetReference>
             </connector>
             <label>Yes - Opportunity Stage Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Room_Nights_Attendees_Need_Update</name>
+        <label>Room Nights/# Attendees Need Update?</label>
+        <locationX>776</locationX>
+        <locationY>1007</locationY>
+        <defaultConnector>
+            <targetReference>Is_the_Opportunity_Stage_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Update_Room_Nights_Attendees</name>
+            <conditionLogic>(1 AND 2) OR ((3 OR 4 OR 5) AND 6)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Attendees__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Room_Nights_Attendees__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Attendees__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Event_Start_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Event_End_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Room_Nights_Attendees__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Room_Nights_Attendees_Value</targetReference>
+            </connector>
+            <label>Yes - Update Room Nights/# Attendees</label>
         </rules>
     </decisions>
     <decisions>
@@ -135,7 +211,7 @@
         <name>Stage</name>
         <label>Stage?</label>
         <locationX>446</locationX>
-        <locationY>1247</locationY>
+        <locationY>1583</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Closed_Lost</name>
@@ -190,6 +266,12 @@
         <expression>{!$Record.Name} + &apos; stage changed from &apos; + TEXT({!$Record__Prior.StageName}) + &apos; to &apos; +  TEXT({!$Record.StageName})</expression>
     </formulas>
     <formulas>
+        <name>var_for_calculatedRoomNightAttendees</name>
+        <dataType>Number</dataType>
+        <expression>({!$Record.Event_End_Date__c}-{!$Record.Event_Start_Date__c})*{!$Record.Attendees__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
         <name>var_for_enquirySentPlus1Day</name>
         <dataType>Date</dataType>
         <expression>{!$Record.Date_of_Enquiry_Reception__c}+1</expression>
@@ -219,7 +301,7 @@
         <name>Update_Opportunity_Hotel_Record_to_DEF</name>
         <label>Update Opportunity Hotel Record to DEF</label>
         <locationX>578</locationX>
-        <locationY>1367</locationY>
+        <locationY>1703</locationY>
         <connector>
             <targetReference>Update_Opportunity_Record</targetReference>
         </connector>
@@ -250,14 +332,14 @@
         <name>Update_Opportunity_Record</name>
         <label>Update Opportunity Record</label>
         <locationX>776</locationX>
-        <locationY>1679</locationY>
+        <locationY>2015</locationY>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
         <name>Update_Oppty_Hotel_Records_to_LOS</name>
         <label>Update Oppty Hotel Records to LOS</label>
         <locationX>50</locationX>
-        <locationY>1367</locationY>
+        <locationY>1703</locationY>
         <connector>
             <targetReference>Update_Opportunity_Record</targetReference>
         </connector>
@@ -293,7 +375,7 @@
         <name>Update_Oppty_Hotel_Records_to_UNC</name>
         <label>Update Oppty Hotel Records to UNC</label>
         <locationX>314</locationX>
-        <locationY>1367</locationY>
+        <locationY>1703</locationY>
         <connector>
             <targetReference>Update_Opportunity_Record</targetReference>
         </connector>
@@ -331,21 +413,6 @@
         <connector>
             <targetReference>Segment_Code_Name_Updated</targetReference>
         </connector>
-        <filterLogic>or</filterLogic>
-        <filters>
-            <field>StageName</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Segment_Code_Name__c</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
         <object>Opportunity</object>
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
