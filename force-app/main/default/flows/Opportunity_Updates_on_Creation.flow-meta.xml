@@ -37,6 +37,22 @@
             </value>
         </assignmentItems>
         <connector>
+            <targetReference>Room_Nights_Attendees_Need_Update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Room_Nights_Attendees_Value</name>
+        <label>Assign Room Nights/# Attendees Value</label>
+        <locationX>50</locationX>
+        <locationY>1127</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Room_Nights_Attendees__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_for_calculatedRoomNightAttendees</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
             <targetReference>Update_Oppty_Fields</targetReference>
         </connector>
     </assignments>
@@ -78,7 +94,7 @@
         <locationX>182</locationX>
         <locationY>671</locationY>
         <defaultConnector>
-            <targetReference>Update_Oppty_Fields</targetReference>
+            <targetReference>Room_Nights_Attendees_Need_Update</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -105,11 +121,43 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Room_Nights_Attendees_Need_Update</name>
+        <label>Room Nights/# Attendees Need Update?</label>
+        <locationX>182</locationX>
+        <locationY>1007</locationY>
+        <defaultConnector>
+            <targetReference>Update_Oppty_Fields</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome - Update Not needed</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Update_Room_Nights_Attendees</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Attendees__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Room_Nights_Attendees__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Room_Nights_Attendees_Value</targetReference>
+            </connector>
+            <label>Yes - Update Room Nights/# Attendees</label>
+        </rules>
+    </decisions>
+    <decisions>
         <description>If segment code name is entered (not null) then the other segment fields may need to be populated.</description>
         <name>Segment_Code_Name_Populated</name>
         <label>Segment Code Name Populated?</label>
         <locationX>182</locationX>
-        <locationY>1127</locationY>
+        <locationY>1463</locationY>
         <defaultConnectorLabel>No - Segment code name not populated</defaultConnectorLabel>
         <rules>
             <name>Yes_Segment_code_name_populated</name>
@@ -128,6 +176,12 @@
         </rules>
     </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>var_for_calculatedRoomNightAttendees</name>
+        <dataType>Number</dataType>
+        <expression>({!$Record.Event_End_Date__c}-{!$Record.Event_Start_Date__c})*{!$Record.Attendees__c}</expression>
+        <scale>0</scale>
+    </formulas>
     <formulas>
         <name>var_for_enquirySentPlus1Day</name>
         <dataType>Date</dataType>
@@ -158,7 +212,7 @@
         <name>Update_Oppty_Fields</name>
         <label>Update Oppty Fields</label>
         <locationX>182</locationX>
-        <locationY>1007</locationY>
+        <locationY>1343</locationY>
         <connector>
             <targetReference>Segment_Code_Name_Populated</targetReference>
         </connector>
@@ -180,7 +234,7 @@
         <name>Populate_Segment_Fields</name>
         <label>Populate Segment Fields</label>
         <locationX>50</locationX>
-        <locationY>1247</locationY>
+        <locationY>1583</locationY>
         <flowName>Process_Update_Segment_Related_Fields</flowName>
         <inputAssignments>
             <name>var_in_segmentValues</name>
