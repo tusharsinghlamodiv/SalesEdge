@@ -31,10 +31,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Hotel_Address__c</field>
-            </layoutItems>
-            <layoutItems>
-                <emptySpace>true</emptySpace>
+                <field>synxisId__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -53,11 +50,12 @@
                 <field>Reservations_Email__c</field>
             </layoutItems>
             <layoutItems>
-                <emptySpace>true</emptySpace>
+                <behavior>Edit</behavior>
+                <field>Time_Zone__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Time_Zone__c</field>
+                <field>Hotel_Address__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -72,9 +70,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Status__c</field>
-            </layoutItems>
-            <layoutItems>
-                <emptySpace>true</emptySpace>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -99,10 +94,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Meeting_Link__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>synxisId__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
