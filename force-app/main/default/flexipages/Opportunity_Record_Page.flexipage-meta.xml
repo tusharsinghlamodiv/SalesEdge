@@ -584,27 +584,6 @@
                 <identifier>flexipage_fieldSection3</identifier>
             </componentInstance>
         </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>decorate</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>richTextValue</name>
-                    <value>&lt;p&gt;&lt;strong&gt;Supporting Documents:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.lightning.force.com/0696800000P9gkz&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Pot Check MICE&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.lightning.force.com/0696800000P9gky&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Pot Check ROOMS ONLY&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.lightning.force.com/lightning/o/ContentDocument/home&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hotel Fact Sheets&lt;/a&gt; (Files &amp;gt; Libraries &amp;gt; Opportunity Supporting Documents - MICE &amp;gt; Hotel Fact Sheets)&lt;/p&gt;</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:richText</componentName>
-                <identifier>flexipage_richText</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>MICE</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
         <name>detailTabContent</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -634,6 +613,31 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;a href=&quot;https://sales-edge.lightning.force.com/0696800000P9gkz&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Pot Check MICE&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.lightning.force.com/0696800000P9gky&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Pot Check ROOMS ONLY&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sales-edge.lightning.force.com/lightning/o/ContentDocument/home&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hotel Fact Sheets&lt;/a&gt; (Files &amp;gt; Libraries &amp;gt; Opportunity Supporting Documents - MICE &amp;gt; Hotel Fact Sheets)&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>MICE</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-88f718f6-4e3f-4709-aa9d-b26401169239</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>body</name>
                     <value>detailTabContent</value>
                 </componentInstanceProperties>
@@ -657,6 +661,20 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>flexipage_tab</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-88f718f6-4e3f-4709-aa9d-b26401169239</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Supporting Docs</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab2</identifier>
             </componentInstance>
         </itemInstances>
         <name>tabs</name>
