@@ -2,7 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Room_Nights_Attendees__c</fullName>
     <externalId>false</externalId>
-    <label>Room Nights/# Attendees</label>
+    <inlineHelpText>Event Length * # of Attendees</inlineHelpText>
+    <label>Room Nights</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>
