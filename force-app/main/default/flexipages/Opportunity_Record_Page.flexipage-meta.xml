@@ -418,16 +418,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Room_Nights__c</fieldItem>
-                <identifier>RecordRoom_Nights_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.Destination__c</fieldItem>
                 <identifier>RecordDestination_cField</identifier>
             </fieldInstance>
