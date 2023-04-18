@@ -672,6 +672,24 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;Ctrip:&amp;nbsp;&lt;a href=&quot;https://ebooking.ctrip.com/ebkovsoverview/groupIndex.html&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://ebooking.ctrip.com/ebkovsoverview/groupIndex.html&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Expedia: &lt;a href=&quot;https://apps.expediapartnercentral.com/manageproperty/ManageProperty&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Partner Central - Login&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Booking.com: &lt;a href=&quot;https://account.booking.com/sign-in&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Booking.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Dayuse Hotel Portal: &lt;a href=&quot;https://partners.dayuse.com/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Dayuse - Hotel Portal&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Agoda: &lt;a href=&quot;https://ycs.agoda.com/en-us/kipp/app/reports/dashboard/49445&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;YCS 4.0&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Hotelbeds:&amp;nbsp;&lt;a href=&quot;https://maxiroom.hotelbeds.com/#/login&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://maxiroom.hotelbeds.com/#/login&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-4b15f1ea-9d3b-4d51-9aa0-be4925f8c105</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>body</name>
                     <value>Facet-f1be2d44-095b-4a44-9d36-2726fb47bd58</value>
                 </componentInstanceProperties>
@@ -713,6 +731,20 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>flexipage_tab3</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-4b15f1ea-9d3b-4d51-9aa0-be4925f8c105</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Useful Links</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab4</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-f3e36347-62ac-4fb9-9421-744cee7bdd21</name>
