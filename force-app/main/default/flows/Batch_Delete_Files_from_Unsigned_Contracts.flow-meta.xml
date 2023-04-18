@@ -199,7 +199,7 @@
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>Opportunity_Close_Date__c</field>
+            <field>Opportunity_Event_End_Date__c</field>
             <operator>LessThan</operator>
             <value>
                 <elementReference>var_for_date365DaysAgo</elementReference>
